@@ -76,3 +76,17 @@ highlife ltd. - founder, media.
 *MIU Psychology* 
 
 *Liceum BSU (Chem/Bio)* 
+
+### Language Skill 
+
+**English:** *Upper-intermediate*
+
+- Abilities: 
+
+  - Listening: advanced
+
+  - Grammar: upper-intermediate 
+
+  - Speech: upper-intermediate 
+
+  - Write: intermediate 
