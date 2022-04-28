@@ -1,12 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anton Vasilyuk CV 2022</title>
+    <link rel="shortcut icon" type="img/png" href="assets/svg/socials/favicon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <!-- TODO display: none for mobiles, never show on intro page... -->
+      <a class="intro-logo" href="#intro">
+        Hello there, i'm knnfmx...
+      </a>
+      <nav id="menu">
+        <ul class="nav__links-container">
+          <li>
+            <a class="nav__links" href="#about">About me</a>
+          </li>
+          <li>
+            <a class="nav__links" href="#skills">Skills</a>
+          </li>
+          <li>
+            <a class="nav__links" href="#code">Code</a>
+          </li>
+          <li>
+            <a class="nav__links" href="#education">Education</a>
+          </li>
+          <li>
+            <a class="nav__links" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- <div class="burger" id="burger"></div> -->
+    </header>
+    <div id="intro" class="intro-page">
+      <div class="intro-socials-container">
+        <a class="github-logo" href="https://www.github.com/knnfmx" target="_blank" title="Welcome to my github account">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z" fill="#ffffff" class="fill-000000"></path>
+          </svg>
+        </a>
+        <ul class="intro-socials-list">
+          <li>
+            <a href="https://www.linkedin.com/in/anton-vasilyuk-283916177/" target="_blank" title="Hey, add me to your contact list please">
+              <svg baseProfile="tiny" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 19H5V9h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165V19h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03V19z" fill="#ffffff" class="fill-000000"></path>
+                <ellipse cx="6.5" cy="6.5" rx="1.55" ry="1.5" fill="#ffffff" class="fill-000000"></ellipse>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/Kennyfmx" target="_blank" title="Can you become my new friend">
+              <svg baseProfile="tiny" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189.374-2.691 1.118-3.512C11.862 4.41 12.791 4 13.904 4H16v3h-2.1c-.498 0-.9.402-.9.899V10z" fill="#ffffff" class="fill-000000"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/kennyfmx/" target="_blank" title="Do you wanna see great pics?">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 56.7" xml:space="preserve">
+                <path d="M28.2 16.7c-7 0-12.8 5.7-12.8 12.8s5.7 12.8 12.8 12.8S41 36.5 41 29.5s-5.8-12.8-12.8-12.8zm0 21c-4.5 0-8.2-3.7-8.2-8.2s3.7-8.2 8.2-8.2 8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z" fill="#ffffff" class="fill-000000"></path>
+                <circle cx="41.5" cy="16.4" r="2.9" fill="#ffffff" class="fill-000000"></circle>
+                <path d="M49 8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7 0-14.5 5.8-14.5 14.5v20.5c0 4.3 1.4 8 4.2 10.7 2.7 2.6 6.3 3.9 10.4 3.9h20.4c4.3 0 7.9-1.4 10.5-3.9 2.7-2.6 4.1-6.3 4.1-10.6V19.3c0-4.2-1.4-7.8-4-10.4zm-.4 31c0 3.1-1.1 5.6-2.9 7.3s-4.3 2.6-7.3 2.6H18c-3 0-5.5-.9-7.3-2.6C8.9 45.4 8 42.9 8 39.8V19.3c0-3 .9-5.5 2.7-7.3 1.7-1.7 4.3-2.6 7.3-2.6h20.6c3 0 5.5.9 7.3 2.7 1.7 1.8 2.7 4.3 2.7 7.2v20.6z" fill="#ffffff" class="fill-000000"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="intro-page-content-container">
+        <div class="intro-page-text-container">
+          <p class="intro-phrase">Hello there, i'm...</p>
+          <p id="intro-text" class="intro-typing-text"></p>
+        </div>
+        <div class="photo-filter"></div>
+      </div>
+      <a class="arrow-down__wrapper" href="#horizontal">
+        <span class="arrow arrow-down"></span>
+        <span class="arrow arrow-down"></span>
+        <span class="arrow arrow-down"></span>
+      </a>
+    </div>
+    <main id="horizontal" class="horizontal-scroll">
+      <div class="horizontal-scroll__sticky-wrapper">
+        <div class="horizontal-scroll__section__wrapper">
+          <section class="horizontal-scroll__section" id="about">
+            <h2 class="section-title">about me</h2>
+            <p class="section-number">1</p>
+            <div class="section-content__wrapper">
+              <div class="section-content section-about">
+                <div class="first-paragraph__wrapper">
+                  <div class="section-about-img-filter__wrapper">
+                    <img class="section-about-img" src="assets/images/IMG_7855.jpg" alt="Anton Vasilyuk">
+                    <div class="section-about-img-filter"></div>
+                  </div>
+                  <p class="section-about-paragraph-first">I'm always loved to create complicated things with many details. I'm having graphic design skills and an understanding of digital aesthetics. I love the design, and of course, love programming. Persevering and multitasking, with analytical thinking and an engineering mindset. I have a critical reflection on my past self-coding mistakes and can self-taught from them. I like to educate myself, open to cutting-edge technologies and challenges. I can easily go through training under the supervision of an experienced mentor and show a quality result, write complex clean code and maintain it. Perfect team player with a versatile personality and a sense of humor.</p>
+                </div>
+                <h3 class="content-title">Main goals and objectives</h3>
+                <p class="section-about-paragraph-second">I want to start a career as a Front-end at a creative company to become a part of the development team and advance to Senior Full-stack with the opportunity to become a Team Lead in the future. I’m always evolving and adding new programming languages, frameworks, and tools to my tech stack.</p>
+              </div>
+            </div>
+            <a class="arrow-right__wrapper" href="#skills">
+              <span class="arrow arrow-right"></span>
+              <span class="arrow arrow-right"></span>
+              <span class="arrow arrow-right"></span>
+            </a>
+          </section>
+          <section class="horizontal-scroll__section" id="skills">
+            <h2 class="section-title">skills</h2>
+            <p class="section-number">2</p>
+            <div class="section-content__wrapper">
+              <div class="section-content section-skills">
+                <div class="skill__wrapper">
+                  <h3 class="content-title skill-title">Main Stack</h3>
+                  <ul class="skills-list">
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="126.5" height="28" role="img" aria-label="JAVASCRIPT">
+                        <title>JAVASCRIPT</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="126.5" height="28" fill="#d7f100"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMGQxMTE3IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SmF2YVNjcmlwdDwvdGl0bGU+PHBhdGggZD0iTTAgMGgyNHYyNEgwVjB6bTIyLjAzNCAxOC4yNzZjLS4xNzUtMS4wOTUtLjg4OC0yLjAxNS0zLjAwMy0yLjg3My0uNzM2LS4zNDUtMS41NTQtLjU4NS0xLjc5Ny0xLjE0LS4wOTEtLjMzLS4xMDUtLjUxLS4wNDYtLjcwNS4xNS0uNjQ2LjkxNS0uODQgMS41MTUtLjY2LjM5LjEyLjc1LjQyLjk3Ni45IDEuMDM0LS42NzYgMS4wMzQtLjY3NiAxLjc1NS0xLjEyNS0uMjctLjQyLS40MDQtLjYwMS0uNTg2LS43OC0uNjMtLjcwNS0xLjQ2OS0xLjA2NS0yLjgzNC0xLjAzNGwtLjcwNS4wODljLS42NzYuMTY1LTEuMzIuNTI1LTEuNzEgMS4wMDUtMS4xNCAxLjI5MS0uODExIDMuNTQxLjU2OSA0LjQ3MSAxLjM2NSAxLjAyIDMuMzYxIDEuMjQ0IDMuNjE2IDIuMjA1LjI0IDEuMTctLjg3IDEuNTQ1LTEuOTY2IDEuNDEtLjgxMS0uMTgtMS4yNi0uNTg2LTEuNzU1LTEuMzM2bC0xLjgzIDEuMDUxYy4yMS40OC40NS42ODkuODEgMS4xMDkgMS43NCAxLjc1NiA2LjA5IDEuNjY2IDYuODcxLTEuMDA0LjAyOS0uMDkuMjQtLjcwNS4wNzQtMS42NWwuMDQ2LjA2N3ptLTguOTgzLTcuMjQ1aC0yLjI0OGMwIDEuOTM4LS4wMDkgMy44NjQtLjAwOSA1LjgwNSAwIDEuMjMyLjA2MyAyLjM2My0uMTM4IDIuNzExLS4zMy42ODktMS4xOC42MDEtMS41NjYuNDgtLjM5Ni0uMTk2LS41OTctLjQ2Ni0uODMtLjg1NS0uMDYzLS4xMDUtLjExLS4xOTYtLjEyNy0uMTk2bC0xLjgyNSAxLjEyNWMuMzA1LjYzLjc1IDEuMTcyIDEuMzI0IDEuNTE3Ljg1NS41MSAyLjAwNC42NzUgMy4yMDcuNDA1Ljc4My0uMjI2IDEuNDU4LS42OTEgMS44MTEtMS40MTEuNTEtLjkzLjQwMi0yLjA3LjM5Ny0zLjM0Ni4wMTItMi4wNTQgMC00LjEwOSAwLTYuMTc5bC4wMDQtLjA1NnoiLz48L3N2Zz4="/>
+                          <text transform="scale(.1)" x="732.5" y="175" textLength="825" fill="#333" font-weight="bold">JAVASCRIPT</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.25" height="28" role="img" aria-label="HTML5">
+                        <title>HTML5</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="88.25" height="28" fill="#d7f100"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMGQxMTE3IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+SFRNTDU8L3RpdGxlPjxwYXRoIGQ9Ik0xLjUgMGgyMWwtMS45MSAyMS41NjNMMTEuOTc3IDI0bC04LjU2NC0yLjQzOEwxLjUgMHptNy4wMzEgOS43NWwtLjIzMi0yLjcxOCAxMC4wNTkuMDAzLjIzLTIuNjIyTDUuNDEyIDQuNDFsLjY5OCA4LjAxaDkuMTI2bC0uMzI2IDMuNDI2LTIuOTEuODA0LTIuOTU1LS44MS0uMTg4LTIuMTFINi4yNDhsLjMzIDQuMTcxTDEyIDE5LjM1MWw1LjM3OS0xLjQ0My43NDQtOC4xNTdIOC41MzF6Ii8+PC9zdmc+"/>
+                          <text transform="scale(.1)" x="541.25" y="175" textLength="442.5" fill="#333" font-weight="bold">HTML5</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="77" height="28" role="img" aria-label="CSS3">
+                        <title>CSS3</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="77" height="28" fill="#d7f100"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMGQxMTE3IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q1NTMzwvdGl0bGU+PHBhdGggZD0iTTEuNSAwaDIxbC0xLjkxIDIxLjU2M0wxMS45NzcgMjRsLTguNTY1LTIuNDM4TDEuNSAwem0xNy4wOSA0LjQxM0w1LjQxIDQuNDFsLjIxMyAyLjYyMiAxMC4xMjUuMDAyLS4yNTUgMi43MTZoLTYuNjRsLjI0IDIuNTczaDYuMTgybC0uMzY2IDMuNTIzLTIuOTEuODA0LTIuOTU2LS44MS0uMTg4LTIuMTFoLTIuNjFsLjI5IDMuODU1TDEyIDE5LjI4OGw1LjM3My0xLjUzTDE4LjU5IDQuNDE0eiIvPjwvc3ZnPg=="/>
+                          <text transform="scale(.1)" x="485" y="175" textLength="330" fill="#333" font-weight="bold">CSS3</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101.75" height="28" role="img" aria-label="REACTJS">
+                        <title>REACTJS</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="101.75" height="28" fill="#00bbb8"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMGQxMTE3IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UmVhY3Q8L3RpdGxlPjxwYXRoIGQ9Ik0xNC4yMyAxMi4wMDRhMi4yMzYgMi4yMzYgMCAwIDEtMi4yMzUgMi4yMzYgMi4yMzYgMi4yMzYgMCAwIDEtMi4yMzYtMi4yMzYgMi4yMzYgMi4yMzYgMCAwIDEgMi4yMzUtMi4yMzYgMi4yMzYgMi4yMzYgMCAwIDEgMi4yMzYgMi4yMzZ6bTIuNjQ4LTEwLjY5Yy0xLjM0NiAwLTMuMTA3Ljk2LTQuODg4IDIuNjIyLTEuNzgtMS42NTMtMy41NDItMi42MDItNC44ODctMi42MDItLjQxIDAtLjc4My4wOTMtMS4xMDYuMjc4LTEuMzc1Ljc5My0xLjY4MyAzLjI2NC0uOTczIDYuMzY1QzEuOTggOC45MTcgMCAxMC40MiAwIDEyLjAwNGMwIDEuNTkgMS45OSAzLjA5NyA1LjA0MyA0LjAzLS43MDQgMy4xMTMtLjM5IDUuNTg4Ljk4OCA2LjM4LjMyLjE4Ny42OS4yNzUgMS4xMDIuMjc1IDEuMzQ1IDAgMy4xMDctLjk2IDQuODg4LTIuNjI0IDEuNzggMS42NTQgMy41NDIgMi42MDMgNC44ODcgMi42MDMuNDEgMCAuNzgzLS4wOSAxLjEwNi0uMjc1IDEuMzc0LS43OTIgMS42ODMtMy4yNjMuOTczLTYuMzY1QzIyLjAyIDE1LjA5NiAyNCAxMy41OSAyNCAxMi4wMDRjMC0xLjU5LTEuOTktMy4wOTctNS4wNDMtNC4wMzIuNzA0LTMuMTEuMzktNS41ODctLjk4OC02LjM4LS4zMTgtLjE4NC0uNjg4LS4yNzctMS4wOTItLjI3OHptLS4wMDUgMS4wOXYuMDA2Yy4yMjUgMCAuNDA2LjA0NC41NTguMTI3LjY2Ni4zODIuOTU1IDEuODM1LjczIDMuNzA0LS4wNTQuNDYtLjE0Mi45NDUtLjI1IDEuNDQtLjk2LS4yMzYtMi4wMDYtLjQxNy0zLjEwNy0uNTM0LS42Ni0uOTA1LTEuMzQ1LTEuNzI3LTIuMDM1LTIuNDQ3IDEuNTkyLTEuNDggMy4wODctMi4yOTIgNC4xMDUtMi4yOTV6bS05Ljc3LjAyYzEuMDEyIDAgMi41MTQuODA4IDQuMTEgMi4yOC0uNjg2LjcyLTEuMzcgMS41MzctMi4wMiAyLjQ0Mi0xLjEwNy4xMTctMi4xNTQuMjk4LTMuMTEzLjUzOC0uMTEyLS40OS0uMTk1LS45NjQtLjI1NC0xLjQyLS4yMy0xLjg2OC4wNTQtMy4zMi43MTQtMy43MDcuMTktLjA5LjQtLjEyNy41NjMtLjEzMnptNC44ODIgMy4wNWMuNDU1LjQ2OC45MS45OTIgMS4zNiAxLjU2NC0uNDQtLjAyLS44OS0uMDM0LTEuMzQ1LS4wMzQtLjQ2IDAtLjkxNS4wMS0xLjM2LjAzNC40NC0uNTcyLjg5NS0xLjA5NiAxLjM0NS0xLjU2NXpNMTIgOC4xYy43NCAwIDEuNDc3LjAzNCAyLjIwMi4wOTMuNDA2LjU4Mi44MDIgMS4yMDMgMS4xODMgMS44Ni4zNzIuNjQuNzEgMS4yOSAxLjAxOCAxLjk0Ni0uMzA4LjY1NS0uNjQ2IDEuMzEtMS4wMTMgMS45NS0uMzguNjYtLjc3MyAxLjI4OC0xLjE4IDEuODctLjcyOC4wNjMtMS40NjYuMDk4LTIuMjEuMDk4LS43NCAwLTEuNDc3LS4wMzUtMi4yMDItLjA5My0uNDA2LS41ODItLjgwMi0xLjIwNC0xLjE4My0xLjg2LS4zNzItLjY0LS43MS0xLjI5LTEuMDE4LTEuOTQ2LjMwMy0uNjU3LjY0Ni0xLjMxMyAxLjAxMy0xLjk1NC4zOC0uNjYuNzczLTEuMjg2IDEuMTgtMS44NjguNzI4LS4wNjQgMS40NjYtLjA5OCAyLjIxLS4wOTh6bS0zLjYzNS4yNTRjLS4yNC4zNzctLjQ4Ljc2My0uNzA0IDEuMTYtLjIyNS4zOS0uNDM1Ljc4Mi0uNjM1IDEuMTc0LS4yNjUtLjY1Ni0uNDktMS4zMS0uNjc2LTEuOTQ3LjY0LS4xNSAxLjMxNS0uMjgzIDIuMDE1LS4zODZ6bTcuMjYgMGMuNjk1LjEwMyAxLjM2NS4yMyAyLjAwNi4zODctLjE4LjYzMi0uNDA1IDEuMjgyLS42NiAxLjkzMy0uMi0uMzktLjQxLS43ODMtLjY0LTEuMTc0LS4yMjUtLjM5Mi0uNDY1LS43NzQtLjcwNS0xLjE0NnptMy4wNjMuNjc1Yy40ODQuMTUuOTQ0LjMxNyAxLjM3NS40OTggMS43MzIuNzQgMi44NTIgMS43MDggMi44NTIgMi40NzYtLjAwNS43NjgtMS4xMjUgMS43NC0yLjg1NyAyLjQ3NS0uNDIuMTgtLjg4LjM0Mi0xLjM1NS40OTMtLjI4LS45NTgtLjY0Ni0xLjk1Ni0xLjEtMi45OC40NS0xLjAxNy44MS0yLjAxIDEuMDg1LTIuOTY0em0tMTMuMzk1LjAwNGMuMjc4Ljk2LjY0NSAxLjk1NyAxLjEgMi45OC0uNDUgMS4wMTctLjgxMiAyLjAxLTEuMDg2IDIuOTY0LS40ODQtLjE1LS45NDQtLjMxOC0xLjM3LS41LTEuNzMyLS43MzctMi44NTItMS43MDYtMi44NTItMi40NzQgMC0uNzY4IDEuMTItMS43NDIgMi44NTItMi40NzYuNDItLjE4Ljg4LS4zNDIgMS4zNTYtLjQ5NHptMTEuNjc4IDQuMjhjLjI2NS42NTcuNDkgMS4zMTIuNjc2IDEuOTQ4LS42NC4xNTctMS4zMTYuMjktMi4wMTYuMzkuMjQtLjM3NS40OC0uNzYyLjcwNS0xLjE1OC4yMjUtLjM5LjQzNS0uNzg4LjYzNi0xLjE4em0tOS45NDUuMDJjLjIuMzkyLjQxLjc4My42NCAxLjE3NS4yMy4zOS40NjUuNzcyLjcwNSAxLjE0My0uNjk1LS4xMDItMS4zNjUtLjIzLTIuMDA2LS4zODYuMTgtLjYzLjQwNi0xLjI4Mi42Ni0xLjkzM3pNMTcuOTIgMTYuMzJjLjExMi40OTMuMi45NjguMjU0IDEuNDIzLjIzIDEuODY4LS4wNTQgMy4zMi0uNzE0IDMuNzA4LS4xNDcuMDktLjMzOC4xMjgtLjU2My4xMjgtMS4wMTIgMC0yLjUxNC0uODA3LTQuMTEtMi4yOC42ODYtLjcyIDEuMzctMS41MzYgMi4wMi0yLjQ0IDEuMTA3LS4xMTggMi4xNTQtLjMgMy4xMTMtLjU0em0tMTEuODMuMDFjLjk2LjIzNCAyLjAwNi40MTUgMy4xMDcuNTMyLjY2LjkwNSAxLjM0NSAxLjcyNyAyLjAzNSAyLjQ0Ni0xLjU5NSAxLjQ4My0zLjA5MiAyLjI5NS00LjExIDIuMjk1LS4yMi0uMDA1LS40MDYtLjA1LS41NTMtLjEzMi0uNjY2LS4zOC0uOTU1LTEuODM0LS43My0zLjcwMy4wNTQtLjQ2LjE0Mi0uOTQ0LjI1LTEuNDM4em00LjU2LjY0Yy40NC4wMi44OS4wMzQgMS4zNDUuMDM0LjQ2IDAgLjkxNS0uMDEgMS4zNi0uMDM0LS40NC41NzItLjg5NSAxLjA5NS0xLjM0NSAxLjU2NS0uNDU1LS40Ny0uOTEtLjk5My0xLjM2LTEuNTY1eiIvPjwvc3ZnPg=="/>
+                          <text transform="scale(.1)" x="608.75" y="175" textLength="577.5" fill="#fff" font-weight="bold">REACTJS</text>
+                        </g>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill__wrapper">
+                  <h3 class="content-title skill-title">Extra Skills</h3>
+                  <ul class="skills-list">
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103.75" height="28" role="img" aria-label="GITBASH">
+                        <title>GITBASH</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="103.75" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRjA1MDMyIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0PC90aXRsZT48cGF0aCBkPSJNMjMuNTQ2IDEwLjkzTDEzLjA2Ny40NTJjLS42MDQtLjYwMy0xLjU4Mi0uNjAzLTIuMTg4IDBMOC43MDggMi42MjdsMi43NiAyLjc2Yy42NDUtLjIxNSAxLjM3OS0uMDcgMS44ODkuNDQxLjUxNi41MTUuNjU4IDEuMjU4LjQzOCAxLjlsMi42NTggMi42NmMuNjQ1LS4yMjMgMS4zODctLjA3OCAxLjkuNDM1LjcyMS43Mi43MjEgMS44ODQgMCAyLjYwNC0uNzE5LjcxOS0xLjg4MS43MTktMi42IDAtLjUzOS0uNTQxLS42NzQtMS4zMzctLjQwNC0xLjk5NkwxMi44NiA4Ljk1NXY2LjUyNWMuMTc2LjA4Ni4zNDIuMjAzLjQ4OC4zNDguNzEzLjcyMS43MTMgMS44ODMgMCAyLjYtLjcxOS43MjEtMS44ODkuNzIxLTIuNjA5IDAtLjcxOS0uNzE5LS43MTktMS44NzkgMC0yLjU5OC4xODItLjE4LjM4Ny0uMzE2LjYwNS0uNDA2VjguODM1Yy0uMjE3LS4wOTEtLjQyNC0uMjIyLS42LS40MDEtLjU0NS0uNTQ1LS42NzYtMS4zNDItLjM5Ni0yLjAwOUw3LjYzNiAzLjcuNDUgMTAuODgxYy0uNi42MDUtLjYgMS41ODQgMCAyLjE4OWwxMC40OCAxMC40NzdjLjYwNC42MDQgMS41ODIuNjA0IDIuMTg2IDBsMTAuNDMtMTAuNDNjLjYwNS0uNjAzLjYwNS0xLjU4MiAwLTIuMTg3Ii8+PC9zdmc+"/>
+                          <text transform="scale(.1)" x="618.75" y="175" textLength="597.5" fill="#fff" font-weight="bold">GITBASH</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107.75" height="28" role="img" aria-label="WEBPACK">
+                        <title>WEBPACK</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="107.75" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjOERENkY5IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+V2VicGFjazwvdGl0bGU+PHBhdGggZD0iTTIyLjE5ODcgMTguNDk4bC05Ljc2OTkgNS41MDIydi00LjI4NTVsNi4wODcyLTMuMzMzOCAzLjY4MjYgMi4xMTd6bS42NjgzLS42MDI2VjYuMzg4NGwtMy41NzUyIDIuMDU0NHY3LjM5NnptLTIxLjA2NTcuNjAyNmw5Ljc2OTkgNS41MDIydi00LjI4NTVMNS40ODQgMTYuMzgwOWwtMy42ODI2IDIuMTE3em0tLjY2ODMtLjYwMjZWNi4zODg0bDMuNTc1MSAyLjA1NDR2Ny4zOTZ6bS40MTgzLTEyLjI1MTVsMTAuMDE5OS01LjY0NHY0LjE0MzRMNS4xNTIgNy42NTg2bC0uMDQ4OS4wMjh6bTIwLjg5NzUgMGwtMTAuMDItNS42NDR2NC4xNDM0bDYuNDE5MiAzLjUxNTQuMDQ4OS4wMjggMy41NTE4LTIuMDQyN3ptLTEwLjg3NzUgMTMuMDk2bC02LjAwNTYtMy4yODczVjguOTM4NGw2LjAwNTQgMy40NTI1djYuMzQ5em0uODU3NSAwbDYuMDA1My0zLjI4NzNWOC45Mzg0bC02LjAwNTMgMy40NTI1ek01Ljk3MjQgOC4xODQ1bDYuMDI4Ny0zLjMwMTVMMTguMDMgOC4xODQ1bC02LjAyODggMy40NjY1eiIvPjwvc3ZnPg=="/>
+                          <text transform="scale(.1)" x="638.75" y="175" textLength="637.5" fill="#fff" font-weight="bold">WEBPACK</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="28" role="img" aria-label="SASS">
+                        <title>SASS</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="78" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjQ0M2Njk5IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U2FzczwvdGl0bGU+PHBhdGggZD0iTTEyIDBjNi42MjcgMCAxMiA1LjM3MyAxMiAxMnMtNS4zNzMgMTItMTIgMTJTMCAxOC42MjcgMCAxMiA1LjM3MyAwIDEyIDB6TTkuNjE1IDE1Ljk5OGMuMTc1LjY0NS4xNTYgMS4yNDgtLjAyNCAxLjc5MmwtLjA2NS4xOGMtLjAyNC4wNjEtLjA1Mi4xMi0uMDc4LjE3Ni0uMTQuMjktLjMyNi41Ni0uNTU1LjgxLS42OTguNzU5LTEuNjcyIDEuMDQ3LTIuMDkuODA1LS40NS0uMjYyLS4yMjYtMS4zMzUuNTg0LTIuMTkuODcxLS45MTggMi4xMi0xLjUwOSAyLjEyLTEuNTA5di0uMDAzbC4xMDgtLjA2MXptOS45MTEtMTAuODYxYy0uNTQyLTIuMTMzLTQuMDc3LTIuODM0LTcuNDIyLTEuNjQ1LTEuOTg5LjcwNy00LjE0NCAxLjgxOC01LjY5MyAzLjI2N0M0LjU2OCA4LjQ4IDQuMjc1IDkuOTggNC4zOTYgMTAuNjA3Yy40MjcgMi4yMTEgMy40NTcgMy42NTcgNC43MDMgNC43M3YuMDA2Yy0uMzY3LjE4LTMuMDU2IDEuNTI5LTMuNjg2IDIuOTI1LS42NzUgMS40Ny4xMDUgMi41MjEuNjE1IDIuNjU1IDEuNTc1LjQzNiAzLjE5NS0uMzYgNC4wNjUtMS42NDkuODQtMS4yNjEuNzY2LTIuODgxLjQwNC0zLjY3Ni40OTYtLjEzNSAxLjA4LS4xOTUgMS44My0uMTA0IDIuMTAxLjI0IDIuNTIxIDEuNTYgMi40MyAyLjEtLjA5LjUzOS0uNTIzLjg1NC0uNjc0Ljk0NC0uMTUuMDkxLS4xOTUuMTItLjE4MS4xODEuMDE1LjA5LjA5MS4wOS4yMS4wNzUuMTY1LS4wMyAxLjA5Ni0uNDUgMS4xNDEtMS40NzEuMDQ1LTEuMjktMS4xODYtMi43MjktMy4zNzUtMi43LS45LjAxNi0xLjQ3MS4wOTEtMS44NzUuMjU2LS4wMy0uMDQ1LS4wNjEtLjA3NS0uMTA1LS4xMDUtMS4zNS0xLjQ1NS0zLjg1NS0yLjQ3NS0zLjc1LTQuNDEuMDMtLjcwNS4yODUtMi41NjQgNC44LTQuODE0IDMuNzA1LTEuODQ2IDYuNjYxLTEuMzM1IDcuMTcxLS4yMS43MzMgMS42MDQtMS41NzYgNC41OS01LjQzMSA1LjAyNC0xLjQ3LjE2NS0yLjIzNS0uNDA0LTIuNDMxLS42MTUtLjIwOS0uMjI1LS4yMzktLjI0LS4zMTQtLjE5NC0uMTIuMDYtLjA0NS4yNTUgMCAuMzc1LjEyLjMuNTg1LjgyNSAxLjM5NiAxLjA5NS43MDQuMjI1IDIuNDMuMzU5IDQuNS0uNDUgMi4zMjQtLjg5OSA0LjEzOS0zLjQwNSAzLjYxNC01LjUwNWwuMDczLjA2N3oiLz48L3N2Zz4="/>
+                          <text transform="scale(.1)" x="490" y="175" textLength="340" fill="#fff" font-weight="bold">SASS</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="28" role="img" aria-label="LESS">
+                        <title>LESS</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="76" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJ3aGl0ZXNtb2tlIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TGVzczwvdGl0bGU+PHBhdGggZD0iTTMuNTk4IDcuMTVhNy45NjEgNy45NjEgMCAwIDAtMS4wNTQuMDY4Yy0uMjgxLjA0MS0uNTIuMTI0LS43MTcuMjQ5YTEuMTkgMS4xOSAwIDAgMC0uNDUuNDk3Yy0uMDk4LjIwOC0uMTQuNDctLjE0LjgwMlYxMC4zYzAgLjQyOC0uMDg0LjczMi0uMjUzLjg4NC0uMTY5LjE2Ni0uNDkyLjI1LS45ODQuMjV2MS4xNmMuNDc4IDAgLjgxNS4wODMuOTg0LjI0OS4xNjkuMTY2LjI1My40Ny4yNTMuOTEydjEuNTQ4YzAgLjU5NC4xODMgMS4wMDkuNTQ4IDEuMjMuMzguMjA3Ljk4NC4zMTggMS44MTMuMzE4di0xLjA3OGMtLjM5MyAwLS42NDYtLjA3LS43NzMtLjE5NC0uMTI2LS4xMjQtLjE4My0uMzczLS4xODMtLjc0NnYtMS40NjVjMC0uMzczLS4wOTgtLjY2My0uMjgtLjg3LS4xODQtLjIwOC0uNDc5LS4zNzQtLjg4Ni0uNDg0LjM5My0uMTI1LjY4OC0uMjkuODcxLS41MTIuMTgzLS4yMi4yODEtLjUxMS4yODEtLjg3VjkuMTY3YzAtLjM2LjA1Ny0uNjA4LjE4My0uNzMzLjEyMi0uMTIuNDEyLS4xOTUuNzg3LS4ydjQuNTQ3YzAgLjQxNi4wMy43NjQuMDkgMS4wNDQuMDU5LjI4LjE2NC41Mi4zMTQuNzI0LjE1LjIwMy4zNTYuMzUuNjE2LjQ0My4yNi4wOTMuNTg5LjE0Ljk4NC4xNC4wOTggMCAuMjA1LS4wMDcuMzItLjAyYTUuMzM2IDUuMzM2IDAgMCAwIC42NS0uMTA3bC0uMDM2LS45OGMtLjI3LjAzOC0uNDkyLjA1Ny0uNjY3LjA1Ny0uMzUzIDAtLjU5LS4wOTItLjcxMy0uMjc2LS4xMjItLjE4My0uMTgzLS41MzQtLjE4My0xLjA1MVY3LjE0OUgzLjU5OHptMTYuODE4LS4wMDF2MS4wOTJjLjM5MyAwIC42NDcuMDY5Ljc3My4xOTMuMTI3LjEyNS4xODMuMzczLjE4My43MzN2MS40NjVjMCAuMzU5LjA5OC42NS4yOC44Ny4xODQuMjIyLjQ3OS4zODcuODcyLjUxMi0uNDA3LjExLS43MDIuMjc2LS44ODUuNDgzLS4xODMuMjA4LS4yODEuNDk4LS4yODEuODcxdjEuNDY1YzAgLjM3My0uMDU3LjYyMi0uMTgzLjc0Ni0uMTI2LjEyNS0uMzguMTk0LS43NzMuMTk0djEuMDc4Yy44MyAwIDEuNDM0LS4xMSAxLjgxMy0uMzE4LjM2NS0uMjIxLjU0OC0uNjM2LjU0OC0xLjIzdi0xLjU0OGMwLS40NDIuMDg1LS43NDYuMjUzLS45MTIuMTY5LS4xNjYuNTA2LS4yNDkuOTg0LS4yNDl2LTEuMTZjLS40OTIgMC0uODE1LS4wODQtLjk4NC0uMjUtLjE2OC0uMTUxLS4yNTMtLjQ1Ni0uMjUzLS44ODRWOC43NjZjMC0uMzMyLS4wNDItLjU5NC0uMTQtLjgwMWExLjE5IDEuMTkgMCAwIDAtLjQ1LS40OTggMS44MjggMS44MjggMCAwIDAtLjcxNy0uMjQ5IDcuMjUyIDcuMjUyIDAgMCAwLTEuMDQtLjA2OXptLTYuNDc5IDEuOTc1Yy0uNjc1IDAtMS4yMDkuMTQtMS41ODguNDIxLS4zOC4yODEtLjU3Ni42ODktLjU3NiAxLjIwOSAwIC40MjIuMTEyLjc3My4zNTEgMS4wMjZzLjYxOC40NzggMS4xNTIuNjg4Yy4wNDMuMDE1LjE0LjA1Ny4yOTYuMTEzLjQ1LjE4My43NTguMzEuOTEzLjQzNmEuNTkyLjU5MiAwIDAgMSAuMjM5LjQ3OGMwIC4yMjQtLjA4NC4zOTMtLjI1My41MDYtLjE2OS4xMTItLjQwOC4xNjgtLjcxNy4xNjgtLjI5NSAwLS42MzItLjA1Ni0uOTg0LS4xNTVhMy45MDEgMy45MDEgMCAwIDEtLjg4NS0uMzM3bC0uMTQgMS4wNGMuNTA1LjI5NiAxLjE4LjQzNiAyLjAzNy40MzYuNzE3IDAgMS4yNjUtLjE1NSAxLjY1OS0uNDY0LjM5My0uMzA5LjU5LS43NTkuNTktMS4zMzUgMC0uNDM2LS4xMjYtLjc4Ny0uMzgtMS4wNTQtLjI1Mi0uMjY3LS42MzItLjQ5Mi0xLjE2Ni0uNjg5LS4zODItLjE1LS44NC0uMjc3LTEuMjA5LS41MDZhLjQ2NS40NjUgMCAwIDEtLjIyNC0uNDIxYzAtLjE4My4wODQtLjMyNC4yMzktLjQyMi4xNTQtLjA5OC4zNjUtLjE0LjY0Ni0uMTQuNTA2IDAgMS4wMjYuMTI2IDEuNTc0LjM3OWwuMzY1LS45NTZjLS41NjItLjI4LTEuMjA4LS40MjEtMS45MzktLjQyMXptNC41MTIgMGMtLjY3NSAwLTEuMjEuMTQtMS41ODkuNDIxLS4zOC4yODEtLjU3Ni42ODktLjU3NiAxLjIwOSAwIC40MjIuMTEyLjc3My4zNTEgMS4wMjYuMjQuMjUzLjYxOS40NzggMS4xNTMuNjg4LjA0Mi4wMTUuMTQuMDU3LjI5NS4xMTMuNDUuMTgzLjc1OS4zMS45MTQuNDM2YS41OTIuNTkyIDAgMCAxIC4yMzguNDc4YzAgLjIyNC0uMDg0LjM5My0uMjUzLjUwNi0uMTY4LjExMi0uNDA3LjE2OC0uNzE2LjE2OGEzLjcyIDMuNzIgMCAwIDEtLjk4NC0uMTU1IDMuOTA0IDMuOTA0IDAgMCAxLS44ODYtLjMzN2wtLjE0IDEuMDRjLjUwNi4yOTYgMS4xOC40MzYgMi4wMzguNDM2LjcwMiAwIDEuMjY1LS4xNTUgMS42ODYtLjQ2NC4zOTQtLjMwOS41OS0uNzU5LjU5LTEuMzM1IDAtLjQzNi0uMTI2LS43ODctLjM3OS0xLjA1NHMtLjYzMi0uNDkyLTEuMTY2LS42ODljLS4zOTItLjE1My0uODQyLS4yNzctMS4yMDktLjUwNmEuNDY1LjQ2NSAwIDAgMS0uMjI1LS40MjFjMC0uMTgzLjA4NS0uMzI0LjI0LS40MjIuMTU0LS4wOTguMzY0LS4xNC42NDYtLjE0LjUwNiAwIDEuMDI2LjEyNiAxLjU3NC4zNzlsLjMzNy0uOTU2Yy0uNTYyLS4yOC0xLjIwOS0uNDIxLTEuOTQtLjQyMXptLTkuNDYuMDE0Yy0uODQyIDAtMS41MDMuMjY3LTEuOTk1LjgxNS0uNDkyLjU0OC0uNzMgMS4yNzktLjczIDIuMTkyIDAgLjk1Ni4yNTIgMS42ODcuNzcyIDIuMjIuNTIuNTM1IDEuMjM3LjgwMiAyLjE2NS44MDIuOCAwIDEuNDktLjE4MyAyLjA4LS41MmwtLjE5Ny0uOTg0YTMuNjYgMy42NiAwIDAgMS0xLjgxMy40OTJjLS40OTIgMC0uODg2LS4xNTUtMS4xNjctLjQ1LS4yOC0uMjk1LS40MzUtLjcxNi0uNDUtMS4yNWgzLjg1MnYtLjU5MWMwLS44MjktLjIyNS0xLjQ5LS42NjEtMS45ODItLjQ1LS40OTEtMS4wNTQtLjc0NC0xLjg1NS0uNzQ0em0tLjAxMy45ODNjLjM4IDAgLjY3NC4xMjcuODg1LjM4LjIxMS4yNTMuMzIzLjYxOC4zMjMgMS4wODJINy42N2MuMDQyLS40OTIuMTgyLS44NTcuNDA3LTEuMDk2LjI1My0uMjM5LjU0OC0uMzY2LjktLjM2NloiLz48L3N2Zz4="/>
+                          <text transform="scale(.1)" x="480" y="175" textLength="320" fill="#fff" font-weight="bold">LESS</text>
+                        </g>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill__wrapper">
+                  <h3 class="content-title skill-title">Graphics</h3>
+                  <ul class="skills-list">
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87.25" height="28" role="img" aria-label="FIGMA">
+                        <title>FIGMA</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="87.25" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRjI0RTFFIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIvPjwvc3ZnPg=="/>
+                          <text transform="scale(.1)" x="536.25" y="175" textLength="432.5" fill="#fff" font-weight="bold">FIGMA</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125.25" height="28" role="img" aria-label="PHOTOSHOP">
+                        <title>PHOTOSHOP</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="125.25" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMzFBOEZGIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QWRvYmUgUGhvdG9zaG9wPC90aXRsZT48cGF0aCBkPSJNOS44NSA4LjQyYy0uMzctLjE1LS43Ny0uMjEtMS4xOC0uMi0uMjYgMC0uNDkgMC0uNjguMDEtLjItLjAxLS4zNCAwLS40MS4wMXYzLjM2Yy4xNC4wMS4yNy4wMi4zOS4wMmguNTNjLjM5IDAgLjc4LS4wNiAxLjE1LS4xOC4zMi0uMDkuNi0uMjguODItLjUzLjIxLS4yNS4zMS0uNTkuMzEtMS4wMy4wMS0uMzEtLjA3LS42Mi0uMjMtLjg5LS4xNy0uMjYtLjQxLS40Ni0uNy0uNTd6TTE5Ljc1LjNINC4yNUMxLjkuMyAwIDIuMiAwIDQuNTV2MTQuODk5YzAgMi4zNSAxLjkgNC4yNSA0LjI1IDQuMjVoMTUuNWMyLjM1IDAgNC4yNS0xLjkgNC4yNS00LjI1VjQuNTVDMjQgMi4yIDIyLjEuMyAxOS43NS4zem0tNy4zOTEgMTEuNjVjLS4zOTkuNTYtLjk1OS45OC0xLjYwOSAxLjIyLS42OC4yNS0xLjQzLjM0LTIuMjUuMzQtLjI0IDAtLjQgMC0uNS0uMDFzLS4yNC0uMDEtLjQzLS4wMXYzLjIwOWMuMDEuMDctLjA0LjEzMS0uMTEuMTQxSDUuNTJjLS4wOCAwLS4xMi0uMDQxLS4xMi0uMTMxVjYuNDJjMC0uMDcuMDMtLjExLjEtLjExLjE3IDAgLjMzIDAgLjU2LS4wMS4yNC0uMDEuNDktLjAxLjc2LS4wMnMuNTYtLjAxLjg3LS4wMmMuMzEtLjAxLjYxLS4wMS45MS0uMDEuODIgMCAxLjUuMSAyLjA2LjMxLjUuMTcuOTYuNDUgMS4zNC44Mi4zMi4zMi41Ny43MS43MyAxLjE0LjE0OS40Mi4yMjkuODUuMjI5IDEuMy4wMDEuODYtLjE5OSAxLjU3LS42IDIuMTN6bTcuMDkxIDMuODljLS4yOC40LS42NzEuNzA5LTEuMTIuODkxLS40OS4yMDktMS4wOS4zMTgtMS44MTEuMzE4LS40NTkgMC0uOTEtLjAzOS0xLjM1OS0uMTI5LS4zNS0uMDYxLS43LS4xNy0xLjAyLS4zMi0uMDctLjAzOS0uMTIxLS4xMDktLjExMS0uMTg5di0xLjc0YzAtLjAyOS4wMTEtLjA3LjA0MS0uMDkuMDI5LS4wMi4wNi0uMDEuMDkuMDEuMzkuMjMuOC4zOTEgMS4yNC40OS4zNzkuMS43NzkuMTUgMS4xOC4xNS4zOCAwIC42NS0uMDUxLjgzLS4xNDEuMTYtLjA3LjI3LS4yNC4yNy0uNDIgMC0uMTQxLS4wOC0uMjctLjI0LS40LS4xNi0uMTI5LS40ODktLjI3OS0uOTc5LS40NzEtLjUxLS4xOC0uOTc5LS40Mi0xLjQyLS43MTktLjMxLS4yMjEtLjU2OS0uNTEtLjc2MS0uODUtLjE1OS0uMzItLjIzOS0uNjctLjIyOS0xLjAyMSAwLS40My4xMi0uODQuMzQxLTEuMjEuMjUtLjQuNjE5LS43MiAxLjA0OS0uOTIuNDY5LS4yMzkgMS4wNTktLjM0OSAxLjc2OS0uMzQ5LjQxIDAgLjgzLjAzIDEuMjQuMDkuMy4wNC41OS4xMi44Ni4yMy4wMzkuMDEuMDguMDUuMS4wOS4wMS4wNC4wMi4wOC4wMi4xMnYxLjYzYzAgLjA0LS4wMi4wOC0uMDUuMS0uMDkuMDItLjE0LjAyLS4xOCAwLS4zLS4xNi0uNjItLjI3LS45Ni0uMzQtLjM3LS4wOC0uNzQtLjEzLTEuMTItLjEzLS4yLS4wMS0uNDEuMDItLjYwMS4wNy0uMTI5LjAzLS4yNC4xLS4zMS4yLS4wNS4wOC0uMDguMTgtLjA4LjI3cy4wNC4xOC4xMDEuMjZjLjA5LjExLjIwOS4yLjM0LjI3LjIyOS4xMi40Ny4yMy43MDkuMzMuNTQxLjE4IDEuMDYxLjQzIDEuNTQxLjczLjMzLjIwOS42LjQ5Ljc4OS44My4xNi4zMTguMjQuNjcuMjMgMS4wMjkuMDExLjQ3MS0uMTI5Ljk0LS4zODkgMS4zMzF6Ii8+PC9zdmc+"/>
+                          <text transform="scale(.1)" x="726.25" y="175" textLength="812.5" fill="#fff" font-weight="bold">PHOTOSHOP</text>
+                        </g>
+                      </svg>
+                    </li>
+                    <li>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135.75" height="28" role="img" aria-label="ILLUSTRATOR">
+                        <title>ILLUSTRATOR</title>
+                        <g shape-rendering="crispEdges">
+                          <rect width="135.75" height="28" fill="#0d1117"/>
+                        </g>
+                        <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+                          <image x="9" y="7" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkY5QTAwIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QWRvYmUgSWxsdXN0cmF0b3I8L3RpdGxlPjxwYXRoIGQ9Ik0xMC41MyAxMC43M2MtLjEtLjMxLS4xOS0uNjEtLjI5LS45Mi0uMS0uMzEtLjE5LS42LS4yNy0uODktLjA4LS4yOC0uMTUtLjU0LS4yMi0uNzhoLS4wMmMtLjA5LjQzLS4yLjg2LS4zNCAxLjI5LS4xNS40OC0uMy45OC0uNDYgMS40OC0uMTQuNTEtLjI5Ljk4LS40NCAxLjRoMi41NGMtLjA2LS4yMTEtLjE0LS40Ni0uMjMtLjcyMS0uMDktLjI2OS0uMTgtLjU1OS0uMjctLjg1OXpNMTkuNzUuM0g0LjI1QzEuOS4zIDAgMi4yIDAgNC41NXYxNC45YzAgMi4zNSAxLjkgNC4yNSA0LjI1IDQuMjVoMTUuNWMyLjM1IDAgNC4yNS0xLjkgNC4yNS00LjI1VjQuNTVDMjQgMi4yIDIyLjEuMyAxOS43NS4zek0xNC43IDE2LjgzaC0yLjA5MWMtLjA2OS4wMS0uMTM5LS4wNC0uMTU5LS4xMWwtLjgyLTIuMzhINy45MWwtLjc2IDIuMzVjLS4wMi4wOS0uMS4xNS0uMTkuMTQxSDUuMDhjLS4xMSAwLS4xNC0uMDYxLS4xMS0uMThMOC4xOSA3LjM4Yy4wMy0uMS4wNi0uMjEuMS0uMzMuMDQtLjIxLjA2LS40My4wNi0uNjUtLjAxLS4wNS4wMy0uMS4wOC0uMTFoMi41OWMuMDggMCAuMTIuMDMuMTMuMDhsMy42NSAxMC4zYy4wMy4xMDkgMCAuMTYtLjEuMTZ6bTMuNC0uMTVjMCAuMTEtLjAzOS4xNi0uMTI5LjE2SDE2LjAxYy0uMSAwLS4xNS0uMDYxLS4xNS0uMTZ2LTcuN2MwLS4xLjA0MS0uMTQuMTMxLS4xNGgxLjk4Yy4wOSAwIC4xMjkuMDUuMTI5LjE0djcuN3ptLS4yMDktOS4wM2MtLjIzMS4yNC0uNTcxLjM3LS45MTEuMzUtLjMzLjAxLS42NS0uMTItLjg5MS0uMzUtLjIzLS4yNS0uMzUtLjU4LS4zNC0uOTItLjAxLS4zNC4xMi0uNjYuMzU5LS44OS4yNDItLjIzLjU2Mi0uMzUuODkyLS4zNS4zOTEgMCAuNjg5LjEyLjkxLjM1LjIyLjI0LjM0LjU2LjMzLjg5LjAxLjM0LS4xMS42Ny0uMzQ5LjkyeiIvPjwvc3ZnPg=="/>
+                          <text transform="scale(.1)" x="778.75" y="175" textLength="917.5" fill="#fff" font-weight="bold">ILLUSTRATOR</text>
+                        </g>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill__wrapper">
+                  <h3 class="content-title skill-title">Codewars</h3>
+                  <a href="http://https://www.codewars.com/users/knnfmx" target="_blank">
+                    <img src="https://www.codewars.com/users/knnfmx/badges/micro" alt="codewarse badge">
+                  </a>
+                </div>
+                <h3 class="content-title projects-title">Projects</h3>
+                <div class="projects__wrapper">
+                  <!-- TODO ADD SLIDER FOR PROJECTS -->
+                  <div class="project">
+                    <a href="https://rolling-scopes-school.github.io/kennyfmx-JSFE2021Q1/virtual-piano/">
+                      <img src="assets/images/virtual-piano.jpg" alt="virtual-piano">
+                    </a>
+                    <p class="project-description">"Virtual Piano" - RS School project for learning events. Capturing phases and event bubbling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="horizontal-scroll__section" id="code">
+            <h2 class="section-title">code</h2>
+            <p class="section-number">3</p>
+            <div class="section-content__wrapper">
+              <div class="section-content section-code">
+                <h3 class="content-title">Particles Demo Code</h3>
+                <div class="code__wrapper">
+                  <canvas class="canvas-demo"></canvas>
+                  <pre>
+                    <code class="code-example">
+                      function drawLines() {
+                        for (let i = 0; i &lt; number - 1; i++) {
+                          for (let j = i + 1; j &lt; number; j++) {
+                            const pointA = points[i];
+                            const pointB = points[j];
+                            const dist = getDist(pointA, pointB);
+                            if (dist &lt;= DIST) {
+                              context.beginPath();
+                              context.strokeStyle = '#00bbb8';
+                              context.lineWidth = (1 - dist / DIST)**1.5;
+                              context.moveTo(pointA.x, pointA.y);
+                              context.lineTo(pointB.x, pointB.y);
+                              context.stroke();
+                            }
+                          }
+                        }
+                      }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="horizontal-scroll__section" id="education">
+            <h2 class="section-title">education</h2>
+            <p class="section-number">4</p>
+            <div class="section-content__wrapper">
+              <div class="section-content section-education">
+                <div class="education">
+                  <h3 class="content-title">Education</h3>
+                  <p>Rolling Scopes School - Front-end development</p>
+                  <p>IT-courses “Adukar” - Front-end, Web development</p>
+                  <p>BSU Biology</p>
+                  <p>MIU Psychology</p>
+                  <p>Liceum BSU (Chem/Bio)</p>
+                </div>
+                <div class="language">
+                  <h3 class="content-title">Language Skills</h3>
+                  <p><span class="bold-text">English: </span>Upper-intermediate</p>
+                  <p><span class="bold-text">Abilities:</span></p>
+                  <ul class="language-abilities">
+                    <li><span class="bold-text">Listening: </span>advanced</li>
+                    <li><span class="bold-text">Grammar: </span>upper-intermediate</li>
+                    <li><span class="bold-text">Speech: </span>upper-intermediate</li>
+                    <li><span class="bold-text">Write: </span>intermediate</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-content-container">
+        <div class="animate-block">
+          <h1 class="sign">Anton Vasilyuk</h1>
+        </div>
+        <div class="contacts__wrapper">
+          <div class="contacts">
+            <h3 class="content-title">Contacts</h3>
+            <ul class="contacts-list content-title">
+              <li class="contacts-list-item">
+                <a class="contacts-list-item__link" href="tel:+375296047704" title="Please call me">+375 (29) 6047704</a>
+              </li>
+              <li class="contacts-list-item">
+                <a class="contacts-list-item__link" href="skype:anton.vasilyuk?chat" title="Please send me a message via skype">Skype chat</a>
+              </li>
+              <li class="contacts-list-item">
+                <a class="contacts-list-item__link" href="mailto:fmxhighlife@gmail.com" title="Please send me e-mail">fmxhighlife@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="socials__wrapper">
+            <ul class="socials-list">
+              <li class="socials-list-item">
+                <a class="footer-social-icon" href="https://rs.school/js/" target="_blank" title="Welcome to our course">
+                  <svg width="100" viewBox="0 0 553 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_0_1)">
+                      <path d="M451.679 109.241C479.466 88.3007 488.035 52.804 470.817 29.9567C453.6 7.10935 417.117 5.56314 389.329 26.5031C361.542 47.4431 352.973 82.9398 370.191 105.787C387.408 128.634 423.891 130.181 451.679 109.241Z" fill="white"/>
+                      <path d="M451.679 109.241C479.466 88.3007 488.035 52.804 470.817 29.9567C453.6 7.10935 417.117 5.56314 389.329 26.5031C361.542 47.4431 352.973 82.9398 370.191 105.787C387.408 128.634 423.891 130.181 451.679 109.241Z" stroke="white" stroke-width="4" stroke-miterlimit="10"/>
+                      <path d="M285.4 68L311.7 66.3C312.3 70.6 313.4 73.8 315.2 76.1C318.1 79.7 322.1 81.5 327.4 81.5C331.3 81.5 334.4 80.6 336.5 78.7C338.5 77.2 339.7 74.8 339.7 72.3C339.7 69.9 338.6 67.6 336.7 66.1C334.7 64.3 330 62.5 322.6 60.9C310.5 58.2 301.8 54.6 296.7 50C291.6 45.7 288.7 39.4 288.9 32.7C288.9 28.1 290.3 23.5 292.9 19.7C295.9 15.4 300 12 304.9 10.1C310.2 7.80001 317.6 6.60001 326.9 6.60001C338.3 6.60001 347 8.70001 353 13C359 17.2 362.6 24 363.7 33.3L337.7 34.8C337 30.8 335.6 27.9 333.3 26C331 24.1 328 23.2 324.1 23.2C320.9 23.2 318.5 23.9 316.9 25.2C315.4 26.4 314.4 28.2 314.5 30.2C314.5 31.7 315.3 33.1 316.5 34C317.8 35.2 320.9 36.3 325.8 37.3C337.9 39.9 346.5 42.5 351.8 45.2C357.1 47.9 360.9 51.2 363.2 55.1C365.6 59.1 366.8 63.7 366.7 68.4C366.7 74 365.1 79.6 361.9 84.3C358.6 89.2 354 93 348.6 95.3C342.9 97.8 335.7 99.1 327.1 99.1C311.9 99.1 301.4 96.2 295.5 90.3C289.6 84.4 286.1 77 285.4 68ZM6.3 97.6V8.20001H52.4C60.9 8.20001 67.5 8.90001 72 10.4C76.4 11.8 80.3 14.7 82.9 18.6C85.8 22.9 87.2 27.9 87.1 33.1C87.4 41.9 82.9 50.3 75.2 54.7C72.2 56.4 68.9 57.6 65.5 58.2C68 58.9 70.5 60.1 72.7 61.5C74.4 62.9 75.8 64.5 77.1 66.2C78.6 67.9 79.9 69.8 81 71.8L94.4 97.7H63L48.2 70.2C46.3 66.7 44.7 64.4 43.2 63.3C41.2 61.9 38.8 61.2 36.4 61.2H34V97.5H6.3V97.6ZM34 44.4H45.7C48.2 44.2 50.6 43.8 53 43.2C54.8 42.9 56.4 41.9 57.5 40.4C60.2 36.8 59.8 31.7 56.5 28.6C54.7 27.1 51.2 26.3 46.2 26.3H34V44.4ZM0 174.2L26.3 172.5C26.9 176.8 28 180 29.8 182.3C32.6 185.9 36.7 187.8 42 187.8C45.9 187.8 49 186.9 51.1 185C53.1 183.4 54.3 181.1 54.3 178.6C54.3 176.2 53.2 173.9 51.3 172.4C49.3 170.6 44.6 168.8 37.1 167.2C25 164.5 16.3 160.9 11.2 156.3C6.1 152 3.2 145.7 3.4 139C3.4 134.4 4.8 129.8 7.4 126C10.4 121.7 14.5 118.3 19.4 116.4C24.7 114.1 32.1 112.9 41.4 112.9C52.8 112.9 61.5 115 67.5 119.3C73.5 123.6 77 130.3 78.1 139.6L52.1 141.1C51.4 137.1 50 134.2 47.7 132.3C45.5 130.4 42.4 129.5 38.5 129.6C35.3 129.6 32.9 130.3 31.3 131.7C29.7 132.9 28.8 134.7 28.9 136.7C28.9 138.2 29.7 139.6 30.9 140.5C32.2 141.7 35.3 142.8 40.2 143.8C52.3 146.4 60.9 149 66.2 151.7C71.5 154.4 75.3 157.7 77.6 161.6C80 165.6 81.2 170.2 81.2 174.8C81.2 180.4 79.5 185.9 76.4 190.6C73.1 195.5 68.5 199.3 63.1 201.6C57.4 204.1 50.2 205.4 41.6 205.4C26.4 205.4 15.9 202.5 10 196.6C4.1 190.6 0.8 183.2 0 174.2H0Z" fill="white"/>
+                      <path d="M133 167.2L157.2 174.5C155.9 180.6 153.2 186.4 149.5 191.5C146.1 196 141.6 199.5 136.5 201.8C131.3 204.1 124.7 205.3 116.7 205.3C107 205.3 99 203.9 92.9 201.1C86.7 198.3 81.4 193.3 76.9 186.2C72.4 179.1 70.2 170 70.2 158.9C70.2 144.1 74.1 132.7 82 124.8C89.9 116.9 101 112.9 115.4 112.9C126.7 112.9 135.5 115.2 142 119.7C148.4 124.3 153.2 131.3 156.4 140.7L132 146.1C131.4 144 130.5 141.9 129.3 140.1C127.8 138 125.9 136.4 123.6 135.2C121.3 134 118.7 133.5 116.1 133.5C109.8 133.5 105 136 101.7 141.1C99.2 144.8 97.9 150.7 97.9 158.7C97.9 168.6 99.4 175.4 102.4 179.1C105.4 182.8 109.6 184.6 115.1 184.6C120.4 184.6 124.4 183.1 127.1 180.2C129.8 177.1 131.8 172.8 133 167.2ZM189.5 114.4H217.1V145.7H247.3V114.4H275.1V203.8H247.3V167.6H217.1V203.8H189.5V114.4V114.4Z" fill="white"/>
+                      <path d="M482.1 114.4H509.7V181.8H552.8V203.8H482V114.4H482.1Z" fill="white"/>
+                      <path d="M271.3 159.1C271.3 144.5 275.4 133.1 283.5 125C291.6 116.9 303 112.8 317.5 112.8C332.4 112.8 343.8 116.8 351.9 124.8C360 132.8 364 144 364 158.4C364 168.9 362.2 177.4 358.7 184.1C355.3 190.7 350 196.1 343.5 199.7C336.8 203.4 328.5 205.3 318.6 205.3C308.5 205.3 300.2 203.7 293.6 200.5C286.8 197.1 281.2 191.8 277.5 185.3C273.4 178.3 271.3 169.6 271.3 159.1ZM298.9 159.2C298.9 168.2 300.6 174.7 303.9 178.7C307.2 182.6 311.8 184.6 317.6 184.6C323.5 184.6 328.1 182.7 331.4 178.8C334.7 174.9 336.3 168 336.3 158C336.3 149.6 334.6 143.4 331.2 139.6C327.8 135.7 323.2 133.8 317.4 133.8C312.3 133.6 307.4 135.8 304 139.7C300.6 143.6 298.9 150.1 298.9 159.2V159.2ZM392.3 159.1C392.3 144.5 396.4 133.1 404.5 125C412.6 116.9 424 112.8 438.5 112.8C453.4 112.8 464.9 116.8 472.9 124.8C480.9 132.8 485 144 485 158.4C485 168.9 483.2 177.4 479.7 184.1C476.3 190.7 471 196.1 464.5 199.7C457.8 203.4 449.5 205.3 439.6 205.3C429.5 205.3 421.2 203.7 414.6 200.5C407.8 197.1 402.2 191.8 398.5 185.3C394.4 178.3 392.3 169.6 392.3 159.1V159.1ZM419.9 159.2C419.9 168.2 421.6 174.7 424.9 178.7C428.2 182.6 432.8 184.6 438.6 184.6C444.5 184.6 449.1 182.7 452.4 178.8C455.7 174.9 457.3 168 457.3 158C457.3 149.6 455.6 143.4 452.2 139.6C448.8 135.7 444.2 133.8 438.4 133.8C433.3 133.6 428.3 135.8 425 139.7C421.6 143.6 419.9 150.1 419.9 159.2V159.2Z" fill="white"/>
+                      <path d="M451.679 109.241C479.466 88.3007 488.035 52.804 470.817 29.9567C453.6 7.10934 417.117 5.56313 389.329 26.5031C361.542 47.4431 352.973 82.9398 370.191 105.787C387.408 128.634 423.891 130.181 451.679 109.241Z" fill="black"/>
+                      <path d="M392.4 61.3L402.4 54.3L414.7 71.8C416.8 74.6 418.4 77.6 419.6 80.9C420.3 83.4 420.1 86.1 419.1 88.5C417.8 91.5 415.7 94 412.9 95.8C409.6 98.1 406.8 99.4 404.4 99.8C402.1 100.2 399.7 99.8 397.5 98.8C395.1 97.6 393 95.9 391.4 93.7L400 85.7C400.7 86.8 401.6 87.8 402.6 88.6C403.3 89.1 404.1 89.4 405 89.4C405.7 89.4 406.4 89.1 406.9 88.7C407.9 88.1 408.6 86.9 408.5 85.7C408.2 84 407.5 82.3 406.4 81L392.4 61.3V61.3ZM422.4 72.4L431.5 65.2C432.5 66.4 433.8 67.3 435.2 67.8C437.2 68.4 439.3 68 441 66.7C442.2 65.9 443.2 64.8 443.6 63.4C444.2 61.6 443.2 59.6 441.4 59C441.1 58.9 440.8 58.8 440.5 58.8C439.3 58.7 437.2 59.2 434.1 60.5C429 62.6 425 63.4 422 63.1C419.1 62.8 416.4 61.3 414.8 58.8C413.6 57.1 413 55.1 412.9 53.1C412.9 50.8 413.5 48.5 414.8 46.6C416.7 43.9 419 41.6 421.8 39.8C426 36.9 429.7 35.5 432.9 35.5C436.1 35.5 439.1 37 441.9 40.1L432.9 47.2C431.1 44.9 427.7 44.4 425.4 46.2L425.1 46.5C424.1 47.1 423.4 48 423 49.1C422.7 49.9 422.9 50.8 423.4 51.5C423.8 52 424.4 52.4 425.1 52.4C425.9 52.5 427.3 52.1 429.3 51.2C434.3 49.1 438.1 47.9 440.7 47.5C442.9 47.1 445.2 47.3 447.3 48.2C449.2 49 450.8 50.4 451.9 52.1C453.3 54.1 454.1 56.5 454.2 59C454.3 61.6 453.6 64.1 452.2 66.3C450.4 69 448.1 71.3 445.4 73.1C439.9 76.9 435.4 78.5 431.8 77.9C427.9 77.3 424.7 75.3 422.4 72.4V72.4Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_0_1">
+                        <rect width="552.8" height="205.3" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-list-item">
+                <a class="footer-social-icon github-logo" href="https://www.github.com/knnfmx" target="_blank" title="Welcome to my github">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z" fill="#ffffff" class="fill-000000"></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-list-item">
+                <a class="footer-social-icon" href="assets/files/front-end-anton-vasilyuk-cv.pdf" download title="download CV .pdf">
+                  <svg data-name="Layer 1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M95 89.06a14.07 14.07 0 0 0-8.68-13l-16.89-7a7 7 0 0 1-4.34-6.5v-8.31l5.36-5.36a7 7 0 0 0 2.06-5V27.48a22.5 22.5 0 0 0-45 0v16.44a7 7 0 0 0 2.06 5l5.36 5.36v8.32a7 7 0 0 1-4.34 6.5l-16.89 7A14.07 14.07 0 0 0 5 89.06V95h90v-5.94ZM30.31 43.92V27.49a19.69 19.69 0 0 1 39.37 0v16.43a4.19 4.19 0 0 1-1.24 3l-9.94 9.94a4.19 4.19 0 0 1-3 1.24H44.47a4.19 4.19 0 0 1-3-1.24l-9.94-9.94a4.19 4.19 0 0 1-1.22-3Zm61.88 48.27H7.81v-3.13a11.26 11.26 0 0 1 6.95-10.39l16.89-7a9.85 9.85 0 0 0 6.08-9.09v-5.51l1.77 1.77a7 7 0 0 0 5 2.06h11.03a7 7 0 0 0 5-2.06l1.77-1.77v5.51a9.85 9.85 0 0 0 6.08 9.1l16.89 7a11.26 11.26 0 0 1 6.95 10.39v2.81Z" fill="#ffffff" class="fill-000000"></path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/scripts/demo-part.js"></script>
+    <script src="assets/scripts/intro-typing.js"></script>
+    <script src="assets/scripts/horizontal-scroll.js"></script>
+  </body>
 </html>
