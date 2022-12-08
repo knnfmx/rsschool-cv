@@ -1,1 +1,1 @@
-[Markdown CV](https://knnfmx.github.io/rsschool-cv/cv/)
+[Markdown CV](https://knnfmx.github.io/rsschool-cv/cv)
