@@ -12,7 +12,7 @@
 
 
 ***Nickname in Messengers:*** 
-**@Kennyfmx**
+**@Kennyfmx or @KnnfmX**
 used in Telegram, Line, Viber, Discord, WhatsApp
 
 ***Skype:***
