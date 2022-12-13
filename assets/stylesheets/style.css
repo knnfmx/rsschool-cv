@@ -11,3 +11,30 @@
   font-weight: normal;
   font-style: normal;
 }
+
+:root {
+  --bg-color-main: #000;
+  --text-color: #ffffff;
+  --text-shadow: #00bbb8;
+  --menu-logo-color: #ffffff;
+  --contact-links-hover: #00bbb8;
+  --section-title-color: #ffffff;
+  --font-notes: 'Hijrnotes';
+  --font-brush: 'StreetbrushW01-Regular';
+  --font-body: 'Roboto';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  width: 100%;
+  background-color: var(--bg-color-main);
+}
