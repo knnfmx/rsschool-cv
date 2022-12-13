@@ -1,5 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: 'Hijrnotes';
+  src: url('../fonts/Hijrnotes.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StreetbrushW01-Regular';
+  src: url('../fonts/StreetbrushW01-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
 }
