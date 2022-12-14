@@ -14,6 +14,8 @@
 
 :root {
   --bg-color-main: #000;
+  --intro-text-color: #ffffff;
+  --intro-text-shadow: #ffffff30;
   --text-color: #ffffff;
   --text-shadow: #00bbb8;
   --menu-logo-color: #ffffff;
@@ -37,4 +39,72 @@ body {
   font-size: 14px;
   width: 100%;
   background-color: var(--bg-color-main);
+}
+
+.intro-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: var(--bg-color-main);
+  margin: 0 auto;
+}
+
+.intro-page__socials-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 40px;
+  z-index: 10;
+}
+
+.github-logo__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.socials-list {
+  display: flex;
+  align-items: center;
+}
+
+.socials-list__item-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+/* INTRO PAGE CONTENT */
+
+.intro-page__content-container {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  padding: 0 40px;
+}
+
+.intro-greetings {
+  font-family: var(--font-notes);
+  font-size: 60px;
+  line-height: 70px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, var(--intro-text-shadow));
+  outline: none;
+  animation: intro-greetings-glow 2s linear forwards;
+}
+
+@keyframes intro-greetings-glow {
+  0%, 5%, 18%, 20%, 30%, 40%, 50%, 60%, 70.5%, 80%, 90% {
+    color: var(--intro-text-shadow);
+    text-shadow: none;
+  }
+  5.1%, 18.1%, 20.1%, 30.1%, 40.5%, 55%, 60.1%, 70.8%, 80.3%, 100% {
+    color: var(--intro-text-color);
+    text-shadow: 0 -4px 10px var(--text-shadow);
+  }
 }
