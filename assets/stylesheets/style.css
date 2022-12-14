@@ -108,3 +108,34 @@ body {
     text-shadow: 0 -4px 10px var(--text-shadow);
   }
 }
+.intro-typing-text {
+  margin-top: 60px;
+  font-family: var(--font-body);
+  font-size: 100px;
+  letter-spacing: 5px;
+  color: var(--intro-text-color);
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--text-shadow);
+}
+
+.intro-typing-text::after {
+  content: "";
+  margin-left: 5px;
+  border-right: 5px solid var(--intro-text-shadow);
+  animation: typing-text-bar .5s linear infinite;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+
+@keyframes typing-text-bar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
