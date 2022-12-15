@@ -124,6 +124,7 @@ body {
   letter-spacing: 5px;
   color: var(--intro-text-color);
   text-transform: uppercase;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, var(--intro-text-shadow));
   text-shadow: 0 0 10px var(--text-shadow);
 }
 
@@ -168,6 +169,99 @@ body {
     opacity: 1;
   }
 }
+
+
+/** HEADER MENU */
+
+/** MAIN CONTENT SECTIONS */
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-container {
+  display: flex;
+  height: 100vh;
+}
+
+.section-title__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 64px;
+  letter-spacing: 3px;
+  padding: 50px 20px;
+  color: var(--section-title-color);
+  background-color: var(--bg-color-main);
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  text-shadow: 0 0 10px var(--text-shadow);
+}
+
+.section-number {
+  font-size: 104px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--section-title-color);
+}
+
+.section-content__wrapper {
+  color: var(--text-color);
+  /* background: linear-gradient(to right bottom,#000000 50%, #1a1a1a, #000000); */
+}
+
+.section-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 30px 50px 50px;
+}
+
+/** SECTION ABOUT */
+
+.section-about__img__wrapper {
+  position: relative;
+  height: 350px;
+  width: 198px;
+  flex-basis: auto;
+}
+
+.section-about__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.section-about__img-filter {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left bottom, #000, #00000000, #000);
+}
+.first-paragraph__wrapper,
+.second-paragraph__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-about__paragraph {
+  flex-basis: 70%;
+  text-indent: 20px;
+  font-size: 1.5em;
+}
+
+
+
+
+
 
 /** MEDIA QUERIES */
 /* intro page content */
@@ -248,8 +342,6 @@ body {
     right: 0;
   }
 }
-
-
 
 @media screen and (max-width: 450px) {
   .intro-greetings {
