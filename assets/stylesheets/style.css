@@ -17,8 +17,10 @@
   --intro-text-color: #ffffff;
   --intro-text-shadow: #ffffff30;
   --text-color: #ffffff;
+  --text-menu-color: #ffffff30;
   --text-shadow: #00bbb8;
   --menu-logo-color: #ffffff;
+  --menu-links-hover: #00bbb8;
   --contact-links-hover: #00bbb8;
   --section-title-color: #ffffff;
   --font-notes: 'Hijrnotes';
@@ -172,6 +174,49 @@ body {
 
 
 /** HEADER MENU */
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  z-index: 20;
+}
+
+.header__menu-logo {
+  font-family: var(--font-notes);
+  font-size: 24px;
+  line-height: 48px;
+  color: var(--menu-logo-color);
+}
+
+.header__menu-logo:hover {
+  color: var(--menu-links-hover);
+}
+
+.menu__links-list {
+  display: flex;
+  gap: 20px;
+}
+
+.menu__link {
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-menu-color);
+}
+
+.menu__link:hover {
+  color: #fff;
+  text-shadow: 0 -2px 10px var(--text-shadow);
+}
+
 
 /** MAIN CONTENT SECTIONS */
 
