@@ -227,10 +227,12 @@ main {
 /** SECTION ABOUT */
 
 .section-about__img__wrapper {
+  flex-shrink: 0;
   position: relative;
   height: 350px;
   width: 198px;
   flex-basis: auto;
+  margin: 8px;
 }
 
 .section-about__img {
@@ -246,16 +248,21 @@ main {
   width: 100%;
   background: linear-gradient(to left bottom, #000, #00000000, #000);
 }
+
 .first-paragraph__wrapper,
 .second-paragraph__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .section-about__paragraph {
   flex-basis: 70%;
   text-indent: 20px;
-  font-size: 1.5em;
+  font-size: 1.7em;
+}
+
+.second-paragraph__img {
+  order: 1;
 }
 
 
@@ -276,6 +283,21 @@ main {
   .intro-typing-text {
     font-size: 80px;
   }
+
+  .section-about__paragraph {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .first-paragraph__wrapper,
+  .second-paragraph__wrapper {
+    justify-content: space-between;
+  }
+  .section-about__paragraph {
+    font-size: 1.3em;
+    text-align: justify;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -287,6 +309,13 @@ main {
   .intro-typing-text {
     font-size: 50px;
   }
+  .section-about__img__wrapper {
+    height: 300px;
+    width: 169px;
+  }
+  .section-about__paragraph {
+    font-size: 1.1em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -297,6 +326,19 @@ main {
 
   .intro-typing-text {
     font-size: 40px;
+  }
+
+  .first-paragraph__wrapper,
+  .second-paragraph__wrapper {
+    display: block;
+  }
+
+  .first-paragraph__img {
+    float: left;
+  }
+
+  .second-paragraph__img {
+    float: right;
   }
 }
 
@@ -334,12 +376,30 @@ main {
     font-size: 32px;
     text-align: center;
   }
+  .section-content {
+    padding: 30px 20px 20px 20px;
+  }
+
+  .section-about__paragraph {
+    font-size: 1em;
+  }
+  .section-about__img__wrapper {
+    height: 270px;
+    width: 152px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .photo-filter {
     width: 100vw;
     right: 0;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+
+  .section-number {
+    font-size: 80px;
   }
 }
 
@@ -352,6 +412,15 @@ main {
     font-size: 20px;
     letter-spacing: 2px;
   }
+  .section-about__paragraph {
+    font-size: 0.9em;
+  }
+  .section-about__img__wrapper {
+    height: 243px;
+    width: 137px;
+  }
+
+
 }
 @media screen and (max-width: 414px) {
 }
