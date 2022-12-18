@@ -79,6 +79,28 @@ body {
   height: 40px;
 }
 
+.github-logo {
+  fill: #fff;
+}
+
+.github-logo__link:hover .github-logo {
+  fill: var(--color-light-blue-2);
+}
+
+.social-list__item-link__icon {
+  fill: #fff;
+}
+
+.socials-list__item:hover .social-list__item-link__icon {
+  fill: var(--color-light-blue-2);
+}
+
+.socials-list__item:hover .github-logo {
+  fill: var(--color-light-blue-2);
+}
+
+
+
 .socials-list {
   display: flex;
   align-items: center;
@@ -216,7 +238,7 @@ body {
 }
 
 .header__menu-logo:hover {
-  color: var(--menu-links-hover);
+  color: var(--color-light-blue-2);
 }
 
 .menu__links-list {
@@ -285,7 +307,9 @@ main {
 
 .section-container {
   display: flex;
-  height: calc(100vh - 128px);
+  /* height: calc(100vh - 128px); */
+  height: 100vh;
+  padding-top: 108px;
 }
 
 .section-title__wrapper {
@@ -649,7 +673,7 @@ main {
   width: 450px;
   text-align: center;
   color: var(--intro-text-color);
-  background: linear-gradient(90deg, black, white, black);
+  background: linear-gradient(90deg, var(--bg-color-main), var(--color-light-blue-2), var(--color-light-blue-3), var(--bg-color-main));
   animation: textGlow 4s cubic-bezier(0.02, 0.63, 0.94, 0.4) infinite;
   background-size: 90%;
   background-repeat: no-repeat;
@@ -698,7 +722,7 @@ main {
   font-size: 15px;
   width: 450px;
   padding-left: 20px;
-  border: 2px solid var(--color-light-blue-4);
+  border: 2px solid var(--color-light-blue-3);
   border-radius: 5px;
   color: var(--text-color);
   background-color: #00000010; 
@@ -777,14 +801,14 @@ main {
   border: none;
   border-radius: 5px;
   outline: none;
-  background-color: var(--color-light-blue-4);
+  background: linear-gradient(90deg, var(--color-light-blue-2), var(--color-light-blue-3));
   color: var(--bg-color-main);
   transition: all 0.3s;
   cursor: pointer;
 }
 
 .contact-form__send-button:hover {
-  background-color: var(--color-light-blue-2);
+  background: linear-gradient(90deg, var(--color-light-blue-2), var(--color-light-blue-2));
 }
 
 .send-button__icon {
@@ -834,6 +858,18 @@ main {
   z-index: 3;
 }
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contacts-title {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-color);
+
+}
+
 .contacts-list {
   display: flex;
   flex-direction: column;
@@ -850,7 +886,7 @@ main {
 }
 
 .contacts-list-item__link:hover {
-  color: var(--contact-links-hover);
+  color: var(--color-light-blue-2);
 }
 
 
@@ -868,12 +904,9 @@ main {
   display: flex;
 }
 
-.socials-list-item:nth-child(2),
-.socials-list-item:nth-child(3) {
-  margin-left: 20px;
+.footer-socials-list {
+  gap: 10px;
 }
-
-
 /** MEDIA QUERIES */
 /* intro page content */
 
