@@ -307,7 +307,6 @@ main {
 
 .section-container {
   display: flex;
-  /* height: calc(100vh - 128px); */
   height: 100vh;
   padding-top: 108px;
 }
@@ -348,7 +347,7 @@ main {
   display: flex;
   height: 100%;
   flex-direction: column;
-  padding: 50px 30px 50px 50px;
+  padding: 40px 30px 50px 50px;
 }
 
 .section-content__title {
@@ -910,7 +909,7 @@ main {
 /** MEDIA QUERIES */
 /* intro page content */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .intro-greetings {
     font-size: 50px;
     line-height: 60px;
@@ -923,6 +922,20 @@ main {
 
   .section-about__paragraph {
     font-size: 1.5em;
+  }
+  .section-about__img__wrapper {
+    height: 300px;
+    width: 169px;
+  }
+  
+  .footer-content-container {
+    padding: 0;
+  }
+  .sign {
+    font-size: 90px;
+  }
+  .contacts__wrapper {
+    padding-bottom: 10px;
   }
 }
 
