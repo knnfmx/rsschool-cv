@@ -400,7 +400,6 @@ main {
 .horizontal-scroll__section {
   display: flex;
   width: 100%;
-  height: 500px;
   flex-shrink: 0;
 }
 
@@ -416,6 +415,7 @@ main {
   text-transform: uppercase;
   text-align: left;
   color: #fff;
+  margin-top: 50px;
   padding-left: 30px;
 }
 
@@ -427,7 +427,8 @@ main {
 .skill {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
   width: 250px;
   height: 150px;
 }
@@ -536,8 +537,10 @@ main {
 .project-description__wrapper {
   display: flex;
   flex-direction: column;
+  gap: 5px;
+  justify-content: center;
   width: 270px;
-  height: 220px;
+  /* height: 220px; */
   border-radius: 20px;
   padding: 15px;
   position: absolute;
@@ -554,6 +557,17 @@ main {
   text-align: justify;
   text-indent: 10px;
   color: #000;
+}
+.project-description__link {
+  font-family: var(--font-body);
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  text-align: right;
+}
+
+.project-description__link:hover {
+  color: var(--color-light-blue-2)
 }
 
 .project-preview__wrapper {
@@ -627,9 +641,34 @@ main {
 }
 
 /** CONTACT FORM*/
+
+.contact-form__title {
+  font-family: var(--font-brush);
+  font-size: 50px;
+  font-weight: 100;
+  width: 450px;
+  text-align: center;
+  color: var(--intro-text-color);
+  background: linear-gradient(90deg, black, white, black);
+  animation: textGlow 4s cubic-bezier(0.02, 0.63, 0.94, 0.4) infinite;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes textGlow {
+  from {
+      background-position: -1000%;
+  } to {
+      background-position: 1000%;
+  }
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
+  width: 450px;
   gap: 20px;
   padding: 20px 0;
 }
@@ -769,7 +808,7 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-top: 150px;
+  padding-top: 50px;
 }
 
 .animate-block {
