@@ -414,18 +414,58 @@ main {
   font-family: var(--font-body);
   font-size: 24px;
   text-transform: uppercase;
+  text-align: left;
   color: #fff;
+  padding-left: 30px;
 }
 
 .skill-container {
   display: flex;
+  margin-top: 20px;
 }
 
 .skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 250px;
   height: 150px;
-  color: #00bbb8;
 }
+
+.react,
+.typescript,
+.javascript {
+  background-color: #00bbb8;
+}
+
+.css,
+.html {
+  background-color: #eeff00;
+}
+
+.sass,
+.webpack, 
+.gitbash {
+  background-color: #fff;
+}
+
+.illustrator,
+.photoshop,
+.figma {
+  background-color: #f05133;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.skill-name {
+  font-family: var(--font-body);
+  font-weight: var(--font-bold);
+  font-size: 30px;
+}
+
 
 /** CODE */
 .section-code {
@@ -557,7 +597,7 @@ main {
   background-size: contain;
 }
 
-.section-content__title {
+.education-title {
   font-size: 24px;
   letter-spacing: 3px;
   text-align: center;
