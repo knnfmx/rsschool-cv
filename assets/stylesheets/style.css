@@ -541,6 +541,44 @@ main {
   background-color: #00bbb8;
 }
 
+/** EDUCATION */ 
+
+.section-education {
+  justify-content: space-around;
+  background: linear-gradient(to right, #000000, #00000080, #000000),
+              right 100px no-repeat url(../images/pngegg.png);
+  background-size: contain;
+}
+
+.section-content__title {
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--section-title-color);
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--text-shadow);
+  padding-bottom: 20px;
+}
+
+.education,
+.language {
+  width: 450px;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.language-bold-text {
+  font-weight: 900;
+}
+
+.language-abilities__list-item {
+  padding-top: 10px;
+  padding-left: 70px;
+}
+
 /** FOOTER  */
 .footer {
   max-width: 1440px;
