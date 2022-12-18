@@ -271,6 +271,24 @@ function drawLines() {
   </main>
   <footer id="footer" class="footer">
     <div class="footer-content-container">
+      <div class="contact-form__wrapper">
+        <h2 class="contact-form__title"></h2>
+        <form class="contact-form" action="mailto:#">
+          <fieldset class="contact-form__field-wrapper">
+            <input class="contact-form__input" id="email" type="email" placeholder=" " required autocomplete="off">
+            <label for="email" class="contact-form__label">E-mail <sup class="label-star">&#10034;</sup></label>
+          </fieldset>
+          <fieldset class="contact-form__field-wrapper">
+            <input class="contact-form__input" id="tel" type="tel" placeholder=" " required autocomplete="off">
+            <label for="tel" class="contact-form__label">Phone <sup class="label-star">&#10034;</sup></label>
+          </fieldset>
+          <fieldset class="contact-form__field-wrapper">
+            <textarea class="contact-form__textarea" name="message" id="contact-form-textarea" placeholder=" " required autocomplete="off"></textarea>
+            <label for="contact-form-textarea" class="contact-form__label">Message <sup class="label-star">&#10034;</sup></label>
+          </fieldset>
+        </form>
+        <button class="contact-form__send-button"><img class="send-button__icon" src="assets/icons/icons8-email-send-30.png"/>send</button>
+      </div>
       <div class="animate-block">
         <h1 class="sign">Anton Vasilyuk</h1>
       </div>
