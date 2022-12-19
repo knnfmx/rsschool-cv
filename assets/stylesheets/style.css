@@ -923,9 +923,9 @@ main {
 }
 @-webkit-keyframes start-sign {
     from {
-        stroke-dashoffset: 12180px;
+        stroke-dashoffset: 24360px;
     } to {
-        stroke-dashoffset: 0px;
+        stroke-dashoffset: 12180px;
     }
 }
 
