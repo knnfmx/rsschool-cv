@@ -132,6 +132,7 @@ body {
 .intro-greetings {
   font-family: var(--font-notes);
   font-size: 60px;
+  font-weight: 100;
   margin-left: 70px;
   line-height: 72px;
   text-shadow: 0 0 10px var(--text-shadow);
@@ -664,7 +665,9 @@ main {
 }
 
 /** CONTACT FORM*/
-
+.contact-form__wrapper {
+  z-index: 10;
+}
 .contact-form__title {
   font-family: var(--font-brush);
   font-size: 50px;
@@ -817,14 +820,45 @@ main {
 /** FOOTER  */
 
 .footer {
+  position: relative;
   max-width: 1440px;
   height: 100vh;
   padding: 100px 40px 20px;
   margin: 0 auto;
+  /* background: linear-gradient(to right, #000000, #00000000, #000000),
+              center no-repeat url(../images/backgrounds-wallpapers-1080p-4k-aydln-3840x2160.jpg);
+  background-size: cover; */
+}
+
+.footer-bg-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background: linear-gradient(to right, #000000, #00000000, #000000),
               center no-repeat url(../images/backgrounds-wallpapers-1080p-4k-aydln-3840x2160.jpg);
   background-size: cover;
+  animation: ghost-go 2s linear;
+  z-index: 0;
 }
+
+@keyframes ghost-show {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes ghost-go {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+
 
 .footer-content-container {
   display: flex;
@@ -841,13 +875,34 @@ main {
   justify-content: flex-end;
   align-items: flex-end;
   height: 100%;
+  z-index: 10;
 }
 
-.sign {
+/* .sign {
   font-family: var(--font-brush);
   font-size: 120px;
   font-weight: 100;
-  color: #00bbb8;
+  color: var(--color-light-blue-4);
+  z-index: 10;
+} */
+
+.sign-text {
+  width: 550px;
+  position: absolute;
+}
+
+#sign-animation {
+    stroke-dasharray: 12180px;
+    stroke-dashoffset: 0px;
+    animation: start-sign 4s linear forwards;
+}
+
+@keyframes start-sign {
+    from {
+        stroke-dashoffset: 0px;
+    } to {
+        stroke-dashoffset: -12180px;
+    }
 }
 
 .contacts__wrapper {
