@@ -401,18 +401,11 @@ main {
 
 /** SKILLS */
 
-.color-block {
-  width: 250px;
-  height: 50px;
-  background-color: red;
-  margin: 0 20px;
-}
-
 .horizontal-scroll__sticky-wrapper {
   overflow: hidden;
   position: sticky;
   max-width: 1440px;
-  top: 128px;
+  top: 200px;
   margin: 0 auto;
 }
 
@@ -624,6 +617,9 @@ main {
 .dot.active {
   width: 30px;
   background-color: #00bbb8;
+}
+._hidden-desktop {
+  display: none;
 }
 
 /** EDUCATION */ 
@@ -989,6 +985,7 @@ main {
     height: 300px;
     width: 169px;
   }
+    
   .footer {
     padding: 100px 40px 0;
   }
@@ -1015,13 +1012,38 @@ main {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 20px 40px 10px;
+  }
+  .header__menu-logo {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .menu__links-list {
+    gap: 10px;
+  }
+
+  .menu__link {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .section-container {
+    padding-top: 66px;
+  }
   .first-paragraph__wrapper,
   .second-paragraph__wrapper {
     justify-content: space-between;
   }
   .section-about__paragraph {
     font-size: 1.3em;
+  }
+
+  .slider {
+    width: 450px;
+  }
+  ._hidden-desktop {
+    display: block;
   }
 }
 
