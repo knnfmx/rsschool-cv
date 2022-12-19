@@ -1,29 +1,26 @@
 let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth;
+let windowHeight = window.screen.height;
+let body = document.getElementById('body');
 
 let horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth;
-console.log(horizontalLength);
-
 let horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop;
-console.log(horizontalScrollDistFromTop);
-
 let scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth;
-console.log(scrollDist);
-document.querySelector('.horizontal-scroll').style.height = (horizontalLength - 950) + "px";
+let skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
+
+document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
 
 let header = document.querySelector('.header');
 let aboutDistFromTop = document.getElementById('about').offsetTop - 108;
 let footer = document.getElementById('footer');
 let bgOverlay = document.querySelector('.footer-bg-overlay');
 let sign = document.getElementById('sign-animation');
-console.log("do" + footer.offsetTop);
-console.log(footer.clientHeight);
 
-let body = document.getElementById('body');
+
 
 
 window.onscroll = () => {
   let scrollTop = window.scrollY;
-  console.log(scrollTop);
+
   if (scrollTop < aboutDistFromTop) {
     header.style.display = "none";
   } else {

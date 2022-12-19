@@ -1,6 +1,6 @@
 const introText = document.querySelector('.intro-typing-text');
 // For stable style sheet work, don't write messages longer than 14 characters
-const phrases = ['Anton Vasilyuk', 'Front-End Dev', 'WEB 3.0 fan', 'Crypto enthusiast', 'Eager beaver', 'Your friend'];
+const phrases = ['Anton Vasilyuk', 'Front-End Dev', 'WEB 3.0 fan', 'Eager beaver', 'Your friend'];
 
 let idx = 0;
 let char = 0;
