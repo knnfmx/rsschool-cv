@@ -891,6 +891,7 @@ main {
     stroke-dasharray: 12180px;
     stroke-dashoffset: 0px;
     animation: start-sign 4s linear forwards;
+    -webkit-animation: start-sign 4s linear forwards;
 }
 
 @keyframes start-sign {
@@ -898,6 +899,13 @@ main {
         stroke-dashoffset: 0px;
     } to {
         stroke-dashoffset: -12180px;
+    }
+}
+@-webkit-keyframes start-sign {
+    from {
+        stroke-dashoffset: 0px;
+    } to {
+        stroke-dashoffset: 12180px;
     }
 }
 
