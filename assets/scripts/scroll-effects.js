@@ -26,11 +26,13 @@ window.onscroll = () => {
   } else {
     header.style.display = "flex";
   }
-  if (scrollTop < horizontalScrollDistFromTop) {
-    document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + "0" + "px)";
-  }
-  if (scrollTop >= horizontalScrollDistFromTop  && scrollTop <= scrollDist) {
-    document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + (scrollTop - horizontalScrollDistFromTop) + "px)";
+  if (windowWidth > 768) {
+    if (scrollTop < horizontalScrollDistFromTop) {
+      document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + "0" + "px)";
+    }
+    if (scrollTop >= horizontalScrollDistFromTop  && scrollTop <= scrollDist) {
+      document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + (scrollTop - horizontalScrollDistFromTop) + "px)";
+    }
   }
   if (scrollTop <= body.clientHeight - footer.clientHeight - 300) {
     bgOverlay.style.animation = "ghost-go 2s linear";
