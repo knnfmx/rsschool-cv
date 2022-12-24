@@ -7,7 +7,7 @@ let horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').o
 let scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth;
 let skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
 
-document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
+// document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
 
 let header = document.querySelector('.header');
 let aboutDistFromTop = document.getElementById('about').offsetTop - 108;
@@ -27,11 +27,14 @@ window.onscroll = () => {
     header.style.display = "flex";
   }
   if (windowWidth > 768) {
+    document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
     if (scrollTop < horizontalScrollDistFromTop) {
       document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + "0" + "px)";
     }
     if (scrollTop >= horizontalScrollDistFromTop  && scrollTop <= scrollDist) {
       document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + (scrollTop - horizontalScrollDistFromTop) + "px)";
+    } else {
+
     }
   }
   if (scrollTop <= body.clientHeight - footer.clientHeight - 300) {
