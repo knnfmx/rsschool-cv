@@ -1523,11 +1523,10 @@ main {
   .code-example {
     font-size: 16px;
   }
-  .footer-content-container {
-    align-items: center;
+  .contact-form__wrapper {
+    align-self: center;
   }
   .animate-block {
-    align-items: center;
     justify-content: center;
   }
   .sign {
@@ -1535,7 +1534,8 @@ main {
   }
   .sign-text {
     width: auto;
-    height: 200px;
+    height: 160px;
+    margin-top: 20px;
   }
 }
 
@@ -1584,6 +1584,11 @@ main {
     height: 270px;
     width: 152px;
   }
+  .sign-text {
+    width: auto;
+    height: 130px;
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1592,11 +1597,60 @@ main {
     right: 0;
   }
   .section-title {
-    font-size: 40px;
+    font-size: 44px;
+    padding: 10px 5px;
+  }
+  .section-number {
+    font-size: 84px;
+  }
+  .section-content {
+    padding: 20px 5px 20px;
+  }
+  .canvas-demo {
+    width: 50%;
+    height: 50vh;
+  }
+  .code-example {
+    font-size: 12px;
   }
 
-  .section-number {
-    font-size: 80px;
+  .slider {
+    width: calc(100vw - 73px);
+  }
+
+  .slider__project-container {
+    width: calc(100vw - 73px);
+  }
+  .education,
+  .language {
+    width: auto;
+  }
+
+  .contact-form__title {
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .contact-form__input,
+  .contact-form__textarea {
+    width: 100%;
+  }
+  /* .animate-block {
+    justify-content:  flex-start;
+    align-items: flex-start;
+  } */
+
+  .sign-text {
+    height: 100px;
+  }
+
+  .footer {
+    padding: 100px 15px 0;
+  }
+
+  .footer-content-container {
+    align-items: ;
   }
 }
 
