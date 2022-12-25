@@ -649,7 +649,7 @@ main {
   cursor: pointer;
 }
 
-.dot.active {
+.dot._dot-active {
   width: 30px;
   background-color: #00bbb8;
 }
@@ -1152,11 +1152,8 @@ main {
   }
 
   /* MENU BURGER */
-  .menu-bg-shadow_hidden {
-    display: none;
-  }
-  .menu-bg-shadow_visible {
-    display: block;
+
+  .menu-bg-shadow {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1164,6 +1161,12 @@ main {
     left: 0;
     background-color: #000000ab;
     z-index: 20;
+  }
+  .menu-bg-shadow_hidden {
+    display: none;
+  }
+  .menu-bg-shadow_visible {
+    display: block;
   }
 
   .menu__links-list {
@@ -1200,9 +1203,15 @@ main {
       opacity: 0;
       transform: translateY(-73px);
     }
-    18.1%, 20.1%, 41%, 64%, 100% {
+    18.1%, 20.1%, 41%, 64% {
       color: var(--text-color);
       text-shadow: 0 -4px 10px var(--text-shadow);
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      color: var(--text-menu-color);
+      text-shadow: none;
       opacity: 1;
       transform: translateY(0);
     }
@@ -1215,7 +1224,6 @@ main {
   .menu__link {
     font-size: 35px;
     line-height: 73px;
-    color: #fff;
   }
 
   /* MENU BURGER WITH TEXT */
@@ -1238,6 +1246,7 @@ main {
     position: absolute;
     border-radius: 20px;
   }
+
   .menu-burger__icon::before {
     transform-origin: left center;
   }
@@ -1260,6 +1269,14 @@ main {
     color: var(--text-color);
   }
 
+  .menu-burger:hover .menu-burger__icon::before,
+  .menu-burger:hover .menu-burger__icon::after {
+    background-color: var(--color-light-blue-2);
+  }
+  .menu-burger:hover .menu-burger__text {
+    color: var(--color-light-blue-2);
+  }
+
   /* BURGER ANIMATION */
   /* BTN OPEN */
 
@@ -1277,7 +1294,7 @@ main {
       width: 62px;
     }
     75% {
-      transform: translateY(-2px) rotate(45deg);
+      transform: translateY(-5px) rotate(45deg);
       width: 62px;
     }
     100% {
@@ -1299,7 +1316,7 @@ main {
       width: 62px;
     }
     75% {
-      transform: translateY(-10px) rotate(-45deg);
+      transform: translateY(-15px) rotate(-45deg);
       width: 62px;
     }
     100% {
