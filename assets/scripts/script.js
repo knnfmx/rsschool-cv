@@ -158,11 +158,14 @@ function changeSlide(ev) {
   });
   ev.target.classList.add('_dot-active');
 }
-
+console.log(slider.offsetWidth);
 if (slider.offsetWidth <= 450) {
   controlDot[0].addEventListener('click', (el) => {
     projectContainer.forEach(el => {
       el.style.transform = "translateX(0px)";
+      el.style.webkitTransform = "translateX(0px)";
+      el.style.MozTransform = "translateX(0px)";
+      el.style.OTransform = "translateX(0px)";
     });
     changeSlide(el);
   });
@@ -170,18 +173,27 @@ if (slider.offsetWidth <= 450) {
   controlDot[1].addEventListener('click', (el) => {
     projectContainer.forEach(el => {
       el.style.transform = "translateX(-500px)";
+      el.style.webkitTransform = "translateX(-500px)";
+      el.style.MozTransform = "translateX(-500px)";
+      el.style.OTransform = "translateX(-500px)"
     });
     changeSlide(el);
   });
   controlDot[2].addEventListener('click', (el) => {
     projectContainer.forEach(el => {
       el.style.transform = "translateX(-1000px)";
+      el.style.webkitTransform = "translateX(-1000px)";
+      el.style.MozTransform = "translateX(-1000px)";
+      el.style.OTransform = "translateX(-1000px)"
     });
     changeSlide(el);
   });
   controlDot[3].addEventListener('click', (el) => {
     projectContainer.forEach(el => {
       el.style.transform = "translateX(-1500px)";
+      el.style.webkitTransform = "translateX(-1500px)";
+      el.style.MozTransform = "translateX(-1500px)";
+      el.style.OTransform = "translateX(-1500px)"
     });
     changeSlide(el);
   });
@@ -189,6 +201,9 @@ if (slider.offsetWidth <= 450) {
   controlDot[0].addEventListener('click', (el) => {
     projectContainer.forEach(el => {
       el.style.transform = "translateX(0px)";
+      el.style.webkitTransform = "translateX(0px)";
+      el.style.MozTransform = "translateX(0px)";
+      el.style.OTransform = "translateX(0px)"
     });
     changeSlide(el);
   });
@@ -196,6 +211,9 @@ if (slider.offsetWidth <= 450) {
   controlDot[1].addEventListener('click', (el) => {
     projectContainer.forEach(el => {
       el.style.transform = "translateX(-1000px)";
+      el.style.webkitTransform = "translateX(-1000px)";
+      el.style.MozTransform = "translateX(-1000px)";
+      el.style.OTransform = "translateX(-1000px)"
     });
     changeSlide(el);
   });
