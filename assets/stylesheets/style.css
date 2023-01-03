@@ -554,15 +554,18 @@ main {
 
 .section-project__slider__wrapper {
   display: flex;
-  gap: 20px;
+  max-width: 750px;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .slider {
-  display: flex;
-  width: 950px;
-  gap: 50px;
-  overflow-x: hidden;
+  display: flex; 
+  /* gap: 50px; */
+  transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
 }
 
 .slider__project-container {
@@ -570,21 +573,27 @@ main {
   height: 370px;
   position: relative;
   flex-shrink: 0;
-  transition: .5s ease-in;
-  -webkit-transition: .5s ease-in;
-  -moz-transition: .5s ease-in;
-  -o-transition: .5s ease-in;
+  /* transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in; */
 }
 
 .project-title {
-  width: 270px;
+  max-width: 270px;
+  padding: 15px;
+  border-radius: 8px;
   font-size: 24px;
   letter-spacing: 3px;
   text-align: center;
-  padding-top: 30px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
   color: var(--section-title-color);
+  background-color: #000000db;
   text-transform: uppercase;
   text-shadow: 0 0 10px var(--text-shadow);
+  z-index: 20;
 }
 .project-description__wrapper {
   display: flex;
@@ -635,7 +644,7 @@ main {
   border-radius: 20px;
 }
 
-.controls-dots {
+.slider__control-dots {
   display: flex;
   gap: 10px;
 }
@@ -1109,7 +1118,7 @@ main {
   }
 
   .slider {
-    width: 450px;
+    max-width: 450px;
   }
   ._hidden-desktop {
     display: block;
@@ -1153,8 +1162,9 @@ main {
   .intro-typing-text {
     font-size: 40px;
   }
-
-  /* MENU BURGER */
+  .section-container {
+    height: 100%;
+  }  /* MENU BURGER */
 
   .menu-bg-shadow {
     width: 100%;
@@ -1585,10 +1595,8 @@ main {
     flex-direction: column;
     gap: 0px;
   }
+
   
-  .section-container {
-    height: 100%;
-  }
   .section-title__wrapper {
     padding-bottom: 10px;
   }
@@ -1647,12 +1655,15 @@ main {
     font-size: 12px;
   }
 
+  .section-project__slider__wrapper {
+    max-width: calc(100vw - 81px);
+  }
   .slider {
-    width: calc(100vw - 81px);
+    
   }
 
   .slider__project-container {
-    width: calc(100vw - 81px);
+    max-width: calc(100vw - 81px);
   }
   .education,
   .language {
