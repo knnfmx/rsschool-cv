@@ -632,7 +632,8 @@ main {
 }
 
 .project-preview__wrapper {
-  width: 195px;
+  display: flex;
+  gap: 20px;
   height: 364px;
   position: absolute;
   top: 0;
@@ -1658,12 +1659,13 @@ main {
   .section-project__slider__wrapper {
     max-width: calc(100vw - 81px);
   }
-  .slider {
-    
-  }
-
+  
   .slider__project-container {
     max-width: calc(100vw - 81px);
+  }
+
+  .project-preview_mobile-hidden {
+    display: none;
   }
   .education,
   .language {
