@@ -71,6 +71,24 @@ body {
   width: 100%;
   padding: 40px;
   z-index: 10;
+  animation: show-container 2s linear forwards;
+  -webkit-animation: show-container 2s linear forwards;
+  -moz-animation: show-container 2s linear forwards;
+  -o-animation: show-container 2s linear forwards;
+  opacity: 0;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+}
+
+@keyframes show-container {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .github-logo__link {
@@ -87,19 +105,17 @@ body {
   fill: var(--color-light-blue-2);
 }
 
-.social-list__item-link__icon {
+.socials-list__item-link__icon {
   fill: #fff;
 }
 
-.socials-list__item:hover .social-list__item-link__icon {
+.socials-list__item:hover .socials-list__item-link__icon {
   fill: var(--color-light-blue-2);
 }
 
 .socials-list__item:hover .github-logo {
   fill: var(--color-light-blue-2);
 }
-
-
 
 .socials-list {
   display: flex;
@@ -175,6 +191,9 @@ body {
   -o-animation: typing-text-bar .5s linear infinite;
   opacity: 0;
   animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
 }
 
 @keyframes typing-text-bar {
@@ -202,6 +221,9 @@ body {
   -o-animation: show-photo 2s linear forwards;
   opacity: 0;
   animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
 }
 
 @keyframes show-photo {
@@ -280,10 +302,10 @@ body {
   bottom: 0;
   left: 0;
   transform: translateX(-110%);
-  transition: transform .5s;
-  -webkit-transition: transform .5s ease;
-  -moz-transition: transform .5s ease;
-  -o-transition: transform .5s ease;
+  transition: transform .8s;
+  -webkit-transition: transform .8s ease;
+  -moz-transition: transform .8s ease;
+  -o-transition: transform .8s ease;
 }
 
 .menu__link {
@@ -700,7 +722,9 @@ main {
   font-size: 18px;
   line-height: 24px;
 }
-
+.education-place {
+  padding-bottom: 5px;
+}
 .language-bold-text {
   font-weight: 900;
 }
@@ -984,7 +1008,7 @@ main {
 .contacts {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
 }
 .contacts-title {
   font-family: var(--font-body);
@@ -998,8 +1022,17 @@ main {
   flex-direction: column;
   gap: 5px;
 }
+
 .contacts-list-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   line-height: 16px;
+}
+
+.contacts-list-item__icon {
+  width: 25px;
+  height: 25px;
 }
 
 .contacts-list-item__link {
@@ -1013,7 +1046,7 @@ main {
 }
 
 
-.social-list__item-link__icon {
+.socials-list__item-link__icon {
   height: 40px;
 }
 
@@ -1072,7 +1105,7 @@ main {
     padding: 100px 40px 0;
   }
   .footer-content-container {
-    padding: 0;
+    padding-top: 50px;
   }
   .contact-form {
     gap: 10px;
@@ -1090,7 +1123,7 @@ main {
     font-size: 90px;
   }
   .contacts__wrapper {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 }
 
@@ -1157,6 +1190,22 @@ main {
 }
 /* max-width: 768px */
 @media screen and (max-width: 834px) {
+  .github-logo__link {
+    width: 25px;
+    height: 25px;
+  }
+  .github-logo {
+    width: 25px;
+    height: 25px;
+  }
+  .socials-list__item-link {
+    width: 25px;
+    height: 25px;
+  }
+  .socials-list__item-link__icon {
+    height: 25px;
+  }
+
   .intro-greetings {
     font-size: 30px;
     line-height: 35px;
@@ -1538,7 +1587,6 @@ main {
   }
   .code-example__wrapper {
     position: absolute;
-    padding: 10px;
     backdrop-filter: blur(2px);
     width: calc(100% - 70px);
     height: calc(100% - 159px);
@@ -1560,12 +1608,9 @@ main {
   .contacts-list-item__link {
     font-size: 12px;
   }
-  .social-list__item-link__icon {
-    height: 20px;
-  }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   .github-logo__link {
     width: 20px;
     height: 20px;
