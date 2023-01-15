@@ -377,6 +377,7 @@ main {
   display: flex;
   height: 100%;
   flex-direction: column;
+  position: relative;
   padding: 40px 30px 50px 50px;
 }
 
@@ -591,6 +592,7 @@ main {
   left: 15px;
   color: var(--section-title-color);
   background-color: #000000db;
+  backdrop-filter: blur(2px);
   text-transform: uppercase;
   text-shadow: 0 0 10px var(--text-shadow);
   z-index: 20;
@@ -1239,6 +1241,7 @@ main {
   .menu__link {
     font-size: 24px;
     line-height: 73px;
+    color: #fff;
   }
 
   /* MENU BURGER WITH TEXT */
@@ -1535,6 +1538,10 @@ main {
   }
   .code-example__wrapper {
     position: absolute;
+    padding: 10px;
+    backdrop-filter: blur(2px);
+    width: calc(100% - 70px);
+    height: calc(100% - 159px);
   }
   .code-example {
     font-size: 16px;
