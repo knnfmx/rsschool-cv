@@ -21,7 +21,8 @@ const sign = document.querySelector('#sign-animation');
 
 const introText = document.querySelector('.intro-typing-text');
 // For stable style sheet work, don't write messages longer than 14 characters
-const phrases = ['Anton Vasilyuk', 'Developer', 'Designer', 'Front-end', 'WEB 3.0'];
+const phrases = ['Anton Vasilyuk', 'Developer', 'Front-end', 'Design',
+    'WEB 3.0'];
 
 //* BURGER
 
@@ -55,10 +56,10 @@ function closeMenu() {
 }
 
 menuBtn.addEventListener('click', () => {
-  if (menuBtn.classList.contains('_close')) {
-    openMenu();
-  } else {
+  if (menuBtn.classList.contains('_open')) {
     closeMenu();
+  } else {
+    openMenu();
   }
 });
 
@@ -77,19 +78,26 @@ menuBGShadow.addEventListener('click', (el) => {
 window.addEventListener('scroll', animationOnScroll);
 function animationOnScroll() {
   let scrollTop = window.scrollY;
-  let aboutDistFromTop = sectionAbout.offsetTop - 250;
+  let aboutDistFromTop = sectionAbout.offsetTop - 350;
   // Header navigation animation
   function  displayNone() {
     header.style.display = "none";
+    header.style.visibility = "hidden";
   };
+
+  function slowShow() {
+    header.style.display = "flex";
+    header.style.visibility = "visible";
+  }
   if (scrollTop < aboutDistFromTop) {
     header.style.animation = "hideMenu .5s linear forwards";
     header.style.opacity = 0;
+    menuBtn.classList.remove('_close');
     setTimeout(displayNone, 500);
   } else {
-    header.style.display = "flex";
     header.style.animation = "showMenu .5s linear forwards";
     header.style.opacity = 1;
+    setTimeout(slowShow, 500);
   }
 
   let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth;
