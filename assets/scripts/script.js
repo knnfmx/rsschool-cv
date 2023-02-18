@@ -75,10 +75,16 @@ menuBGShadow.addEventListener('click', (el) => {
   }
 });
 
+const paragraphAboutFirst = document.querySelector('.first-paragraph__wrapper');
+const paragraphAboutSecond = document.querySelector('.second-paragraph__wrapper');
+const paragraphAnim = document.querySelectorAll('.section-about__paragraph');
+const paragraphImage = document.querySelectorAll('.section-about__img__wrapper');
+
 window.addEventListener('scroll', animationOnScroll);
 function animationOnScroll() {
   let scrollTop = window.scrollY;
   let aboutDistFromTop = sectionAbout.offsetTop - 350;
+  
   // Header navigation animation
   function  displayNone() {
     header.style.display = "none";
@@ -118,8 +124,6 @@ function animationOnScroll() {
     }
   }
   
-
-
   const education = document.querySelector('.education');
   const language = document.querySelector('.language');
   
@@ -129,7 +133,82 @@ function animationOnScroll() {
           scrollTop = window.pageYOffset || document.documentElement.scrollTop;
           return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
+
+  function showParagraph(idx, el) {
+    el.children.item(idx).style.animation = `showParagraph .7s linear`;
+    el.children.item(idx).style.opacity = "1";
+    el.children.item(idx).style.filter = "blur(0px)";
+  }
+
+  function hideParagraph(idx, el) {
+    el.children.item(idx).style.animation = "hideParagraph .7s linear";
+    el.children.item(idx).style.opacity = "0";
+    el.children.item(idx).style.filter = "blur(4px)";
+  }
+
+  // TODO new trigger for animations
+  for (let i = 0; i < paragraphAnim.length; i++) {
+    for (let idx = 0; idx < paragraphAnim[i].children.length; idx++) {
+      if (sectionAbout.getBoundingClientRect().top >= windowHeight / 2) {
+        paragraphAnim[i].style.animation = "zoomOut 2s linear";
+        paragraphAnim[i].style.transform = "scale(0.98)";
+        hideParagraph(idx, paragraphAnim[i]);
+      } else if (sectionAbout.getBoundingClientRect().top <= -windowHeight / 8) {
+        paragraphAnim[i].style.animation = "zoomOut 2s linear";
+        paragraphAnim[i].style.transform = "scale(0.98)";
+        hideParagraph(idx, paragraphAnim[i]);
+      } else {
+        paragraphAnim[i].style.animation = "zoomIn 2s linear";
+        paragraphAnim[i].style.transform = "scale(1)";
+        setTimeout(() => showParagraph(idx, paragraphAnim[i]), `${idx * 200}`);
+      }
+    }
+  }
+
+
   // TODO add animation for blocks
+  // if (paragraphAboutFirst.getBoundingClientRect().top >= windowHeight / 2) {
+  //   paragraphAnim[0].style.animation = "zoomOut 3s linear";
+  //   paragraphAnim[0].style.transform = "scale(0.98)";
+  //   for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+  //     hideParagraph(idx, paragraphAnim[0]);
+  //   }
+  // } else if (paragraphAboutFirst.getBoundingClientRect().top <= -windowHeight / 8) {
+  //   paragraphAnim[0].style.animation = "zoomOut 3s linear";
+  //   paragraphAnim[0].style.transform = "scale(0.98)";
+  //   for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+  //     hideParagraph(idx, paragraphAnim[0]);
+  //   }
+  // } else {
+  //   paragraphAnim[0].style.animation = "zoomIn 3s linear";
+  //   paragraphAnim[0].style.transform = "scale(1)";
+  //   for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+  //     setTimeout(() => showParagraph(idx, paragraphAnim[0]), `${idx * 200}`);
+  //   }
+  // }
+
+  // if (paragraphAboutSecond.getBoundingClientRect().top >= windowHeight / 1.5) {
+  //   paragraphAnim[1].style.animation = "zoomOut 3s linear";
+  //   paragraphAnim[1].style.transform = "scale(0.94)";
+  //   for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+  //     hideParagraph(idx, paragraphAnim[1]);
+  //   }
+  // } else if (paragraphAboutSecond.getBoundingClientRect().top <= -windowHeight / 10) {
+  //   paragraphAnim[1].style.animation = "zoomOut 3s linear";
+  //   paragraphAnim[1].style.transform = "scale(0.94)";
+  //   for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+  //     hideParagraph(idx, paragraphAnim[1]);
+  //   }
+  // } else {
+  //   paragraphAnim[1].style.animation = "zoomIn 3s linear";
+  //   paragraphAnim[1].style.transform = "scale(1)";
+  //   for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+  //     setTimeout(() => showParagraph(idx, paragraphAnim[1]), `${idx * 200}`);
+  //   }
+  // }
+
+
+
   if (sectionEducation.getBoundingClientRect().top >= windowHeight / 4) {
     bgOverlayEducation.style.animation = "brainOut .7s linear";
     bgOverlayEducation.style.opacity = "0";
@@ -152,6 +231,7 @@ function animationOnScroll() {
   }
 };
 animationOnScroll();
+
 //* INTRO TEXT
 
 let idx = 0;

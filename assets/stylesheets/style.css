@@ -325,7 +325,7 @@ body {
 }
 
 .header__menu-logo:hover {
-  background: -webkit-linear-gradient(90deg, var(--bg-color-main), var(--color-light-blue-2), var(--color-light-blue-3), var(--bg-color-main));;
+  background: -webkit-linear-gradient(180deg, var(--color-light-blue), var(--color-light-blue-2), var(--color-light-blue-3), var(--color-light-blue-4));;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -421,12 +421,22 @@ main {
   font-size: 64px;
   letter-spacing: 3px;
   padding: 50px 20px;
-  color: var(--section-title-color);
   background-color: var(--bg-color-main);
   text-transform: uppercase;
   transform: rotate(180deg);
   -webkit-writing-mode: vertical-rl;
   writing-mode: tb-rl;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--section-title-color);
+  text-shadow: none;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+
+.section-title:hover {
+  color: var(--section-title-color);
   text-shadow: 0 0 10px var(--text-shadow);
 }
 
@@ -482,11 +492,13 @@ main {
   background: linear-gradient(to left bottom, #000, #00000000, #000);
 }
 
+
 .first-paragraph__wrapper,
 .second-paragraph__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .section-about__paragraph {
@@ -494,6 +506,69 @@ main {
   text-indent: 20px;
   font-size: 1.7em;
   text-align: justify;
+  transform: scale(0.98);
+  transition: all 3s ease-in;
+  -webkit-transition: all 3s ease-in;
+  -moz-transition: all 3s ease-in;
+  -o-transition: all 3s ease-in;
+  animation: zoomOut 3s linear forwards;
+  -webkit-animation: zoomOut 3s linear forwards;
+  -moz-animation: zoomOut 3s linear forwards;
+  -o-animation: zoomOut 3s linear forwards;
+}
+
+.section-about__paragraph > span {
+  opacity: 0;
+  filter: blur(4px);
+  transition: all .9s ease-in;
+  -webkit-transition: all .9s ease-in;
+  -moz-transition: all .9s ease-in;
+  -o-transition: all .9s ease-in;
+  animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -moz-animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -o-animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes showParagraph {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes hideParagraph {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+  }
 }
 
 .second-paragraph__img {
@@ -633,7 +708,6 @@ main {
 
 .slider {
   display: flex; 
-  /* gap: 50px; */
   transition: all .5s ease-in;
   -webkit-transition: all .5s ease-in;
   -moz-transition: all .5s ease-in;
@@ -645,10 +719,6 @@ main {
   height: 370px;
   position: relative;
   flex-shrink: 0;
-  /* transition: all .5s ease-in;
-  -webkit-transition: all .5s ease-in;
-  -moz-transition: all .5s ease-in;
-  -o-transition: all .5s ease-in; */
 }
 
 .project-title {
