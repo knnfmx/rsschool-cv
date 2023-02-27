@@ -1,6 +1,6 @@
 const canvas = document.querySelector('.canvas-demo');
 const context = canvas.getContext('2d');
-const number = 50;
+const number = 15;
 const speed = 3;
 const DIST = 500;
 
@@ -8,6 +8,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // function for add points
+
 const points = [];
 for (let q = 0; q < number; q++) {
   const point = {
@@ -38,8 +39,8 @@ function getRandom(min, max) {
 function drawPoints() {
   for (const point of points) {
     context.beginPath();
-    context.fillStyle = '#ffffff';
-    context.arc(point.x, point.y, 1, 0, Math.PI * 2);
+    context.fillStyle = '#00ffb9';
+    context.arc(point.x, point.y, 3, 0, Math.PI * 2);
     context.fill();
   }
 }

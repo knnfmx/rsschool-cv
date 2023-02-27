@@ -1,95 +1,62 @@
-const body = document.getElementById('body');
-const header = document.querySelector('.header');
-const menuBtn = document.querySelector('#burger');
-const menu = document.querySelector('.menu__links-list');
-const menuItems = menu.querySelectorAll('.menu__links-list__item');
-const menuLinks = document.querySelectorAll('.menu__link');
-const menuBGShadow = document.querySelector('.menu-bg-shadow');
-const footer = document.getElementById('footer');
-const bgOverlay = document.querySelector('.footer-bg-overlay');
-const sign = document.getElementById('sign-animation');
+const body = document.querySelector('#body'),
+      header = document.querySelector('.header'),
+      menuBtn = document.querySelector('#burger'),
+      menu = document.querySelector('.menu__links-list'),
+      menuItems = menu.querySelectorAll('.menu__links-list__item'),
+      menuLinks = document.querySelectorAll('.menu__link'),
+      menuBGShadow = document.querySelector('.menu-bg-shadow'),
 
-const introText = document.querySelector('.intro-typing-text');
+      sectionIntro = document.querySelector('#intro'),
+      introSocialsContainer = document.querySelector('.intro-page__socials-container'),
+      sectionAbout = document.querySelector('#about'),
+      sectionSkills = document.querySelector('#horizontal'),
+      sectionCode = document.querySelector('#code'),
+      sectionProjects = document.querySelector('#projects'),
+      sectionEducation = document.querySelector('#education'),
+      bgOverlayEducation = document.querySelector('.section-education-bg-overlay'),
+
+      footer = document.querySelector('#footer'),
+      bgOverlayFooter = document.querySelector('.footer-bg-overlay'),
+      sign = document.querySelector('#sign-animation'),
+
+      introText = document.querySelector('.intro-typing-text'),
 // For stable style sheet work, don't write messages longer than 14 characters
-const phrases = ['Anton Vasilyuk', 'Front-End Dev', 'WEB 3.0 fan', 'Eager beaver', 'Your friend'];
-
-const projectContainer = document.querySelectorAll('.slider__project-container');
-const controlDot = document.querySelectorAll('.dot');
-const slider = document.querySelector('.slider');
-
-let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth;
-let windowHeight = window.screen.height;
-
-let horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth;
-let horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop;
-let scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth;
-let skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
-let aboutDistFromTop = document.getElementById('about').offsetTop - 108;
-
-window.onscroll = () => {
-  let scrollTop = window.scrollY;
-
-  if (scrollTop < aboutDistFromTop) {
-    header.style.display = "none";
-  } else {
-    header.style.display = "flex";
-  }
-  if (windowWidth > 768) {
-    document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
-    if (scrollTop < horizontalScrollDistFromTop) {
-      document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + "0" + "px)";
-    }
-    if (scrollTop >= horizontalScrollDistFromTop && scrollTop <= scrollDist) {
-      document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + (scrollTop - horizontalScrollDistFromTop) + "px)";
-    } else {
-
-    }
-  }
-  if (scrollTop <= body.clientHeight - footer.clientHeight - 300) {
-    bgOverlay.style.animation = "ghost-go 2s linear";
-    bgOverlay.style.opacity = "0";
-    sign.style.animation = "none";
-  } else {
-    bgOverlay.style.animation = "ghost-show 2s linear";
-    bgOverlay.style.opacity = "1";
-    sign.style.animation = "start-sign 4s linear forwards";
-  }
-};
+      phrases = ['Anton Vasilyuk', 'Developer', 'Front-end', 'Design',
+    'WEB 3.0'];
 
 //* INTRO TEXT
-
-let idx = 0;
-let char = 0;
-let currentText = [];
-let deleting = false;
-let isEnd = false;
+let idx = 0,
+char = 0,
+currentText = [],
+deleting = false,
+isEnd = false;
 
 function typeText() {
   isEnd = false;
 
   if (idx < phrases.length) {
-    if (!deleting && char <= phrases[idx].length) {
-      currentText.push(phrases[idx][char]);
-      char++;
-      introText.innerHTML = currentText.join('');
+  if (!deleting && char <= phrases[idx].length) {
+    currentText.push(phrases[idx][char]);
+    char++;
+    introText.innerHTML = currentText.join('');
+  }
+  if (deleting && char <= phrases[idx].length) {
+    currentText.pop(phrases[idx][char]);
+    char--;
+    introText.innerHTML = currentText.join('');
+  }
+  if (char == phrases[idx].length) {
+    isEnd = true;
+    deleting = true;
+  }
+  if (deleting && char === 0) {
+    currentText = [];
+    deleting = false;
+    idx++;
+    if (idx == phrases.length) {
+      idx = 0;
     }
-    if (deleting && char <= phrases[idx].length) {
-      currentText.pop(phrases[idx][char]);
-      char--;
-      introText.innerHTML = currentText.join('');
-    }
-    if (char == phrases[idx].length) {
-      isEnd = true;
-      deleting = true;
-    }
-    if (deleting && char === 0) {
-      currentText = [];
-      deleting = false;
-      idx++;
-      if (idx == phrases.length) {
-        idx = 0;
-      }
-    }
+  }
   }
   const speedUp = Math.random() * (80 - 50) + 50;
   const normalSpeed = Math.random() * (200 - 100) + 100;
@@ -99,7 +66,6 @@ function typeText() {
 setTimeout(typeText, 3000);
 
 //* BURGER
-
 function openMenu() {
   header.classList.add('header_small');
   menuBtn.classList.remove('_close');
@@ -130,10 +96,10 @@ function closeMenu() {
 }
 
 menuBtn.addEventListener('click', () => {
-  if (menuBtn.classList.contains('_close')) {
-    openMenu();
-  } else {
+  if (menuBtn.classList.contains('_open')) {
     closeMenu();
+  } else {
+    openMenu();
   }
 });
 
@@ -144,78 +110,209 @@ menuLinks.forEach(link => {
 });
 
 menuBGShadow.addEventListener('click', (el) => {
-  if(el.target.classList.contains('close-menu')) {
+  if (el.target.classList.contains('close-menu')) {
     closeMenu();
   }
 });
 
+const paragraphAboutFirst = document.querySelector('.first-paragraph__wrapper'),
+      paragraphAboutSecond = document.querySelector('.second-paragraph__wrapper'),
+      paragraphAnim = document.querySelectorAll('.section-about__paragraph'),
+      paragraphImageFirst = document.querySelector('.first-paragraph__img'),
+      paragraphImageSecond = document.querySelector('.second-paragraph__img');
+
+window.addEventListener('scroll', animationOnScroll);
+
+function animationOnScroll() {
+  let scrollTop = window.scrollY;
+  let aboutDistFromTop = sectionAbout.offsetTop - 350;
+  
+  // Header navigation animation
+  function  displayNone() {
+    header.style.display = "none";
+    header.style.visibility = "hidden";
+  }
+
+  function slowShow() {
+    header.style.display = "flex";
+    header.style.visibility = "visible";
+  }
+
+  if (scrollTop < aboutDistFromTop) {
+    header.style.animation = "hideMenu .5s linear forwards";
+    header.style.opacity = 0;
+    menuBtn.classList.remove('_close');
+    setTimeout(displayNone, 500);
+  } else {
+    header.style.animation = "showMenu .5s linear forwards";
+    header.style.opacity = 1;
+    setTimeout(slowShow, 500);
+  }
+
+  let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth,
+      windowHeight = window.screen.height,
+      horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth,
+      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop,
+      scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth,
+      skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
+ 
+  // section Skill horizontal scroll animation
+  if (windowWidth > 834) {
+    document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
+    if (scrollTop < horizontalScrollDistFromTop) {
+      document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + "0" + "px)";
+    }
+    if (scrollTop >= horizontalScrollDistFromTop && scrollTop <= scrollDist) {
+      document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + (scrollTop - horizontalScrollDistFromTop) + "px)";
+    }
+  }
+      
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+  }
+
+  function showParagraph(idx, el) {
+    el.children.item(idx).style.animation = 'showParagraph .7s linear';
+    el.children.item(idx).style.opacity = '1';
+    el.children.item(idx).style.filter = 'blur(0px)';
+  }
+
+  function hideParagraph(idx, el) {
+    el.children.item(idx).style.animation = 'hideParagraph .7s linear';
+    el.children.item(idx).style.opacity = '0';
+    el.children.item(idx).style.filter = 'blur(4px)';
+  }
+
+  function showElement(el) {
+    el.style.animation = 'showParagraphPhoto .7s linear';
+    el.style.transform = 'scale(1)';
+    el.style.opacity = '1';
+    el.style.filter = 'blur(0px)';
+  }
+
+  function hideElement(el) {
+    el.style.animation = 'hideParagraphPhoto .7s linear';
+    el.style.transform = 'scale(0.98)';
+    el.style.opacity = '0';
+    el.style.filter = 'blur(4px)';
+  }
+
+  // TODO add animation for blocks
+  if (paragraphAboutFirst.getBoundingClientRect().top >= windowHeight / 2) {
+    hideElement(paragraphImageFirst);
+    paragraphAnim[0].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[0].style.transform = 'scale(0.98)';
+    for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[0]);
+    } 
+  } else if (paragraphAboutFirst.getBoundingClientRect().top <= -windowHeight / 8) {
+    hideElement(paragraphImageFirst);
+    paragraphAnim[0].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[0].style.transform = 'scale(0.98)';
+    for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[0]);
+    }
+  } else {
+    showElement(paragraphImageFirst);
+    paragraphAnim[0].style.animation = 'zoomIn 2s linear';
+    paragraphAnim[0].style.transform = 'scale(1)';
+    for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+      setTimeout(() => showParagraph(idx, paragraphAnim[0]), `${idx * 200}`);
+    }
+  }
+
+  if (paragraphAboutSecond.getBoundingClientRect().top >= windowHeight / 1.5) {
+    hideElement(paragraphImageSecond);
+    paragraphAnim[1].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[1].style.transform = 'scale(0.94)';
+    for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[1]);
+    }
+  } else if (paragraphAboutSecond.getBoundingClientRect().top <= -windowHeight / 10) {
+    hideElement(paragraphImageSecond);
+    paragraphAnim[1].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[1].style.transform = 'scale(0.94)';
+    for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[1]);
+    }
+  } else {
+    showElement(paragraphImageSecond);
+    paragraphAnim[1].style.animation = 'zoomIn 2s linear';
+    paragraphAnim[1].style.transform = 'scale(1)';
+    for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+      setTimeout(() => showParagraph(idx, paragraphAnim[1]), `${idx * 200}`);
+    }
+  }
+
+  const education = document.querySelector('.education'),
+        language = document.querySelector('.language');
+
+  if (sectionEducation.getBoundingClientRect().top >= windowHeight / 4) {
+    hideElement(education);
+    hideElement(language);
+    bgOverlayEducation.style.animation = 'brainOut .7s linear';
+    bgOverlayEducation.style.opacity = '0';
+  } else if (sectionEducation.getBoundingClientRect().top <= -windowHeight / 2) {
+    hideElement(education);
+    hideElement(language);
+    bgOverlayEducation.style.animation = 'brainOut .7s linear';
+    bgOverlayEducation.style.opacity = '0';
+  } else {
+    showElement(education);
+    showElement(language);
+    bgOverlayEducation.style.animation = 'brainShow .7s linear';
+    bgOverlayEducation.style.opacity = '1';
+  }
+
+  const contactForm = document.querySelector('.contact-form__wrapper');
+
+  if (scrollTop <= body.clientHeight - footer.clientHeight - 300) {
+    bgOverlayFooter.style.animation = 'ghostOut 2s linear';
+    bgOverlayFooter.style.opacity = '0';
+    sign.style.animation = 'none';
+    hideElement(contactForm);
+  } else {
+    bgOverlayFooter.style.animation = 'ghostShow 2s linear';
+    bgOverlayFooter.style.opacity = '1';
+    sign.style.animation = 'start-sign 4s linear forwards';
+    setTimeout(() => showElement(contactForm), 1000);
+  }
+};
+animationOnScroll();
+
 //* SLIDER
+const sliderWrapper = document.querySelector('.section-project__slider__wrapper'),
+      slider = document.querySelector('.slider'),
+      projectContainer = document.querySelectorAll('.slider__project-container'),
+      controlDots = document.querySelectorAll('.dot');
+let sliderCount = 0;
+let sliderWidth;
 
-
-function changeSlide(ev) {
-  controlDot.forEach(el => {
-    el.classList.remove('_dot-active');
-  });
-  ev.target.classList.add('_dot-active');
+window.addEventListener('resize', showSlide);
+function showSlide() {
+  sliderWidth = sliderWrapper.offsetWidth;
+  slider.style.width = sliderWidth * projectContainer.length + 'px';
+  projectContainer.forEach(el => el.style.width = sliderWidth + 'px');
+  changeSlide();
 }
-console.log(slider.offsetWidth);
-if (slider.offsetWidth <= 450) {
-  controlDot[0].addEventListener('click', (el) => {
-    projectContainer.forEach(el => {
-      el.style.transform = "translateX(0px)";
-      el.style.webkitTransform = "translateX(0px)";
-      el.style.MozTransform = "translateX(0px)";
-      el.style.OTransform = "translateX(0px)";
-    });
-    changeSlide(el);
-  });
+showSlide();
 
-  controlDot[1].addEventListener('click', (el) => {
-    projectContainer.forEach(el => {
-      el.style.transform = "translateX(-500px)";
-      el.style.webkitTransform = "translateX(-500px)";
-      el.style.MozTransform = "translateX(-500px)";
-      el.style.OTransform = "translateX(-500px)"
-    });
-    changeSlide(el);
-  });
-  controlDot[2].addEventListener('click', (el) => {
-    projectContainer.forEach(el => {
-      el.style.transform = "translateX(-1000px)";
-      el.style.webkitTransform = "translateX(-1000px)";
-      el.style.MozTransform = "translateX(-1000px)";
-      el.style.OTransform = "translateX(-1000px)"
-    });
-    changeSlide(el);
-  });
-  controlDot[3].addEventListener('click', (el) => {
-    projectContainer.forEach(el => {
-      el.style.transform = "translateX(-1500px)";
-      el.style.webkitTransform = "translateX(-1500px)";
-      el.style.MozTransform = "translateX(-1500px)";
-      el.style.OTransform = "translateX(-1500px)"
-    });
-    changeSlide(el);
-  });
-} else if (slider.offsetWidth >= 950) {
-  controlDot[0].addEventListener('click', (el) => {
-    projectContainer.forEach(el => {
-      el.style.transform = "translateX(0px)";
-      el.style.webkitTransform = "translateX(0px)";
-      el.style.MozTransform = "translateX(0px)";
-      el.style.OTransform = "translateX(0px)"
-    });
-    changeSlide(el);
-  });
-
-  controlDot[1].addEventListener('click', (el) => {
-    projectContainer.forEach(el => {
-      el.style.transform = "translateX(-1000px)";
-      el.style.webkitTransform = "translateX(-1000px)";
-      el.style.MozTransform = "translateX(-1000px)";
-      el.style.OTransform = "translateX(-1000px)"
-    });
-    changeSlide(el);
-  });
+function changeSlide() {
+  slider.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
 }
 
+function activeSlide(idx) {
+  controlDots.forEach(item => item.classList.remove('_dot-active'));
+  controlDots[idx].classList.add('_dot-active');
+}
+
+controlDots.forEach((dot, idx) => {
+  dot.addEventListener('click', () => {
+    sliderCount = idx;
+    changeSlide();
+    activeSlide(sliderCount);
+  });
+});
