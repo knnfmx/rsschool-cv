@@ -133,17 +133,17 @@ body {
 }
 
 .github-logo__link:hover .github-icon-stop:first-child {
-  stop-color: #ff3425;
+  stop-color: var(--color-light-blue);
 } 
 .github-logo__link:hover .github-icon-stop:last-child {
-  stop-color: #ff3fb6;
+  stop-color: var(--color-light-blue-4);
 } 
 
 .socials-list__item:hover .icon-stop:first-child {
-  stop-color: #ff3425;
+  stop-color: var(--color-light-blue);
 }
 .socials-list__item:hover .icon-stop:last-child {
-  stop-color: #ff3fb6;
+  stop-color: var(--color-light-blue-4);
 }
 
 
@@ -469,6 +469,7 @@ main {
 .section-about {
   justify-content: space-between;
 }
+
 .section-about__img__wrapper {
   flex-shrink: 0;
   position: relative;
@@ -476,6 +477,21 @@ main {
   width: 198px;
   flex-basis: auto;
   margin: 8px;
+}
+
+.first-paragraph__img,
+.second-paragraph__img {
+  transform: scale(0.98);
+  opacity: 0;
+  filter: blur(4px);
+  transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
+  animation: hideParagraphPhoto 2s linear forwards;
+  -webkit-animation: hideParagraphPhoto 2s linear forwards;
+  -moz-animation: hideParagraphPhoto 2s linear forwards;
+  -o-animation: hideParagraphPhoto 2s linear forwards;
 }
 
 .section-about__img {
@@ -492,6 +508,32 @@ main {
   background: linear-gradient(to left bottom, #000, #00000000, #000);
 }
 
+@keyframes showParagraphPhoto {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+@keyframes hideParagraphPhoto {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.98);
+  }
+}
+
+
 
 .first-paragraph__wrapper,
 .second-paragraph__wrapper {
@@ -507,14 +549,14 @@ main {
   font-size: 1.7em;
   text-align: justify;
   transform: scale(0.98);
-  transition: all 3s ease-in;
-  -webkit-transition: all 3s ease-in;
-  -moz-transition: all 3s ease-in;
-  -o-transition: all 3s ease-in;
-  animation: zoomOut 3s linear forwards;
-  -webkit-animation: zoomOut 3s linear forwards;
-  -moz-animation: zoomOut 3s linear forwards;
-  -o-animation: zoomOut 3s linear forwards;
+  transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
+  animation: zoomOut 2s linear forwards;
+  -webkit-animation: zoomOut 2s linear forwards;
+  -moz-animation: zoomOut 2s linear forwards;
+  -o-animation: zoomOut 2s linear forwards;
 }
 
 .section-about__paragraph > span {
@@ -1232,7 +1274,7 @@ main {
 }
 
 .contacts-list-item__link.gradient:hover {
-  background-image: linear-gradient(45deg, #ff3fb6 10%, #ff3425 90%), linear-gradient(45deg, #ff3425 10%, #fff 50%);
+  background-image: linear-gradient(45deg, var(--color-light-blue) 10%, var(--color-light-blue-4) 90%), linear-gradient(45deg, var(--color-light-blue-4) 10%, #fff 50%);
   background-size: 100% 25px, 100% 25px;
   background-repeat: no-repeat;
 }
@@ -1244,10 +1286,10 @@ main {
 }
 
 .contacts-list-item__link:hover .icon-stop:first-child {
-  stop-color: #ff3425;
+  stop-color: var(--color-light-blue);
 }
 .contacts-list-item__link:hover .icon-stop:last-child {
-  stop-color: #ff3fb6;
+  stop-color: var(--color-light-blue-4);
 }
 
 .socials-list__item-link__icon {

@@ -1,27 +1,27 @@
-const body = document.querySelector('#body');
-const header = document.querySelector('.header');
-const menuBtn = document.querySelector('#burger');
-const menu = document.querySelector('.menu__links-list');
-const menuItems = menu.querySelectorAll('.menu__links-list__item');
-const menuLinks = document.querySelectorAll('.menu__link');
-const menuBGShadow = document.querySelector('.menu-bg-shadow');
+const body = document.querySelector('#body'),
+      header = document.querySelector('.header'),
+      menuBtn = document.querySelector('#burger'),
+      menu = document.querySelector('.menu__links-list'),
+      menuItems = menu.querySelectorAll('.menu__links-list__item'),
+      menuLinks = document.querySelectorAll('.menu__link'),
+      menuBGShadow = document.querySelector('.menu-bg-shadow'),
 
-const sectionIntro = document.querySelector('#intro');
-const introSocialsContainer = document.querySelector('.intro-page__socials-container');
-const sectionAbout = document.querySelector('#about');
-const sectionSkills = document.querySelector('#horizontal');
-const sectionCode = document.querySelector('#code');
-const sectionProjects = document.querySelector('#projects');
-const sectionEducation = document.querySelector('#education');
-const bgOverlayEducation = document.querySelector('.section-education-bg-overlay');
+      sectionIntro = document.querySelector('#intro'),
+      introSocialsContainer = document.querySelector('.intro-page__socials-container'),
+      sectionAbout = document.querySelector('#about'),
+      sectionSkills = document.querySelector('#horizontal'),
+      sectionCode = document.querySelector('#code'),
+      sectionProjects = document.querySelector('#projects'),
+      sectionEducation = document.querySelector('#education'),
+      bgOverlayEducation = document.querySelector('.section-education-bg-overlay'),
 
-const footer = document.querySelector('#footer');
-const bgOverlayFooter = document.querySelector('.footer-bg-overlay');
-const sign = document.querySelector('#sign-animation');
+      footer = document.querySelector('#footer'),
+      bgOverlayFooter = document.querySelector('.footer-bg-overlay'),
+      sign = document.querySelector('#sign-animation'),
 
-const introText = document.querySelector('.intro-typing-text');
+      introText = document.querySelector('.intro-typing-text'),
 // For stable style sheet work, don't write messages longer than 14 characters
-const phrases = ['Anton Vasilyuk', 'Developer', 'Front-end', 'Design',
+      phrases = ['Anton Vasilyuk', 'Developer', 'Front-end', 'Design',
     'WEB 3.0'];
 
 //* BURGER
@@ -75,12 +75,14 @@ menuBGShadow.addEventListener('click', (el) => {
   }
 });
 
-const paragraphAboutFirst = document.querySelector('.first-paragraph__wrapper');
-const paragraphAboutSecond = document.querySelector('.second-paragraph__wrapper');
-const paragraphAnim = document.querySelectorAll('.section-about__paragraph');
-const paragraphImage = document.querySelectorAll('.section-about__img__wrapper');
+const paragraphAboutFirst = document.querySelector('.first-paragraph__wrapper'),
+      paragraphAboutSecond = document.querySelector('.second-paragraph__wrapper'),
+      paragraphAnim = document.querySelectorAll('.section-about__paragraph'),
+      paragraphImageFirst = document.querySelector('.first-paragraph__img'),
+      paragraphImageSecond = document.querySelector('.second-paragraph__img');
 
 window.addEventListener('scroll', animationOnScroll);
+
 function animationOnScroll() {
   let scrollTop = window.scrollY;
   let aboutDistFromTop = sectionAbout.offsetTop - 350;
@@ -106,12 +108,12 @@ function animationOnScroll() {
     setTimeout(slowShow, 500);
   }
 
-  let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth;
-  let windowHeight = window.screen.height;
-  let horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth;
-  let horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop;
-  let scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth;
-  let skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
+  let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth,
+      windowHeight = window.screen.height,
+      horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth,
+      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop,
+      scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth,
+      skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
  
   // section Skill horizontal scroll animation
   if (windowWidth > 834) {
@@ -124,9 +126,7 @@ function animationOnScroll() {
     }
   }
   
-  const education = document.querySelector('.education');
-  const language = document.querySelector('.language');
-  
+    
   function offset(el) {
     const rect = el.getBoundingClientRect(),
           scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
@@ -135,110 +135,118 @@ function animationOnScroll() {
   }
 
   function showParagraph(idx, el) {
-    el.children.item(idx).style.animation = `showParagraph .7s linear`;
-    el.children.item(idx).style.opacity = "1";
-    el.children.item(idx).style.filter = "blur(0px)";
+    el.children.item(idx).style.animation = 'showParagraph .7s linear';
+    el.children.item(idx).style.opacity = '1';
+    el.children.item(idx).style.filter = 'blur(0px)';
   }
 
   function hideParagraph(idx, el) {
-    el.children.item(idx).style.animation = "hideParagraph .7s linear";
-    el.children.item(idx).style.opacity = "0";
-    el.children.item(idx).style.filter = "blur(4px)";
-  }
-
-  // TODO new trigger for animations
-  for (let i = 0; i < paragraphAnim.length; i++) {
-    for (let idx = 0; idx < paragraphAnim[i].children.length; idx++) {
-      if (sectionAbout.getBoundingClientRect().top >= windowHeight / 2) {
-        paragraphAnim[i].style.animation = "zoomOut 2s linear";
-        paragraphAnim[i].style.transform = "scale(0.98)";
-        hideParagraph(idx, paragraphAnim[i]);
-      } else if (sectionAbout.getBoundingClientRect().top <= -windowHeight / 8) {
-        paragraphAnim[i].style.animation = "zoomOut 2s linear";
-        paragraphAnim[i].style.transform = "scale(0.98)";
-        hideParagraph(idx, paragraphAnim[i]);
-      } else {
-        paragraphAnim[i].style.animation = "zoomIn 2s linear";
-        paragraphAnim[i].style.transform = "scale(1)";
-        setTimeout(() => showParagraph(idx, paragraphAnim[i]), `${idx * 200}`);
-      }
-    }
+    el.children.item(idx).style.animation = 'hideParagraph .7s linear';
+    el.children.item(idx).style.opacity = '0';
+    el.children.item(idx).style.filter = 'blur(4px)';
   }
 
 
   // TODO add animation for blocks
-  // if (paragraphAboutFirst.getBoundingClientRect().top >= windowHeight / 2) {
-  //   paragraphAnim[0].style.animation = "zoomOut 3s linear";
-  //   paragraphAnim[0].style.transform = "scale(0.98)";
-  //   for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
-  //     hideParagraph(idx, paragraphAnim[0]);
-  //   }
-  // } else if (paragraphAboutFirst.getBoundingClientRect().top <= -windowHeight / 8) {
-  //   paragraphAnim[0].style.animation = "zoomOut 3s linear";
-  //   paragraphAnim[0].style.transform = "scale(0.98)";
-  //   for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
-  //     hideParagraph(idx, paragraphAnim[0]);
-  //   }
-  // } else {
-  //   paragraphAnim[0].style.animation = "zoomIn 3s linear";
-  //   paragraphAnim[0].style.transform = "scale(1)";
-  //   for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
-  //     setTimeout(() => showParagraph(idx, paragraphAnim[0]), `${idx * 200}`);
-  //   }
-  // }
+  if (paragraphAboutFirst.getBoundingClientRect().top >= windowHeight / 2) {
+    paragraphImageFirst.style.animation = 'hideParagraphPhoto .7s linear';
+    paragraphImageFirst.style.transform = 'scale(0.98)';
+    paragraphImageFirst.style.opacity = '0';
+    paragraphImageFirst.style.filter = 'blur(4px)';
+    paragraphAnim[0].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[0].style.transform = 'scale(0.98)';
+    for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[0]);
+    }
+    
+  } else if (paragraphAboutFirst.getBoundingClientRect().top <= -windowHeight / 8) {
+    paragraphImageFirst.style.animation = 'hideParagraphPhoto .7s linear';
+    paragraphImageFirst.style.transform = 'scale(0.98)';
+    paragraphImageFirst.style.opacity = '0';
+    paragraphImageFirst.style.filter = 'blur(4px)';
+    paragraphAnim[0].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[0].style.transform = 'scale(0.98)';
+    for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[0]);
+    }
+    
+  } else {
+    paragraphImageFirst.style.animation = 'showParagraphPhoto .7s linear';
+    paragraphImageFirst.style.transform = 'scale(1)';
+    paragraphImageFirst.style.opacity = '1';
+    paragraphImageFirst.style.filter = 'blur(0px)';
+    paragraphAnim[0].style.animation = 'zoomIn 2s linear';
+    paragraphAnim[0].style.transform = 'scale(1)';
+    for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
+      setTimeout(() => showParagraph(idx, paragraphAnim[0]), `${idx * 200}`);
+    }
+    
+  }
 
-  // if (paragraphAboutSecond.getBoundingClientRect().top >= windowHeight / 1.5) {
-  //   paragraphAnim[1].style.animation = "zoomOut 3s linear";
-  //   paragraphAnim[1].style.transform = "scale(0.94)";
-  //   for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
-  //     hideParagraph(idx, paragraphAnim[1]);
-  //   }
-  // } else if (paragraphAboutSecond.getBoundingClientRect().top <= -windowHeight / 10) {
-  //   paragraphAnim[1].style.animation = "zoomOut 3s linear";
-  //   paragraphAnim[1].style.transform = "scale(0.94)";
-  //   for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
-  //     hideParagraph(idx, paragraphAnim[1]);
-  //   }
-  // } else {
-  //   paragraphAnim[1].style.animation = "zoomIn 3s linear";
-  //   paragraphAnim[1].style.transform = "scale(1)";
-  //   for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
-  //     setTimeout(() => showParagraph(idx, paragraphAnim[1]), `${idx * 200}`);
-  //   }
-  // }
+  if (paragraphAboutSecond.getBoundingClientRect().top >= windowHeight / 1.5) {
+    paragraphImageSecond.style.animation = 'hideParagraphPhoto .7s linear';
+    paragraphImageSecond.style.transform = 'scale(0.98)';
+    paragraphImageSecond.style.opacity = '0';
+    paragraphImageSecond.style.filter = 'blur(4px)';
+    paragraphAnim[1].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[1].style.transform = 'scale(0.94)';
+    for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[1]);
+    }
+  } else if (paragraphAboutSecond.getBoundingClientRect().top <= -windowHeight / 10) {
+    paragraphImageSecond.style.animation = 'hideParagraphPhoto .7s linear';
+    paragraphImageSecond.style.transform = 'scale(0.98)';
+    paragraphImageSecond.style.opacity = '0';
+    paragraphImageSecond.style.filter = 'blur(4px)';
+    paragraphAnim[1].style.animation = 'zoomOut 2s linear';
+    paragraphAnim[1].style.transform = 'scale(0.94)';
+    for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+      hideParagraph(idx, paragraphAnim[1]);
+    }
+  } else {
+    paragraphImageSecond.style.animation = 'showParagraphPhoto .7s linear';
+    paragraphImageSecond.style.transform = 'scale(1)';
+    paragraphImageSecond.style.opacity = '1';
+    paragraphImageSecond.style.filter = 'blur(0px)';
+    paragraphAnim[1].style.animation = 'zoomIn 2s linear';
+    paragraphAnim[1].style.transform = 'scale(1)';
+    for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
+      setTimeout(() => showParagraph(idx, paragraphAnim[1]), `${idx * 200}`);
+    }
+  }
 
 
 
   if (sectionEducation.getBoundingClientRect().top >= windowHeight / 4) {
-    bgOverlayEducation.style.animation = "brainOut .7s linear";
-    bgOverlayEducation.style.opacity = "0";
+    bgOverlayEducation.style.animation = 'brainOut .7s linear';
+    bgOverlayEducation.style.opacity = '0';
   } else if (sectionEducation.getBoundingClientRect().top <= -windowHeight / 2) {
-    bgOverlayEducation.style.animation = "brainOut .7s linear";
-    bgOverlayEducation.style.opacity = "0";
+    bgOverlayEducation.style.animation = 'brainOut .7s linear';
+    bgOverlayEducation.style.opacity = '0';
   } else {
-    bgOverlayEducation.style.animation = "brainShow .7s linear";
-    bgOverlayEducation.style.opacity = "1";
+    bgOverlayEducation.style.animation = 'brainShow .7s linear';
+    bgOverlayEducation.style.opacity = '1';
   }
 
   if (scrollTop <= body.clientHeight - footer.clientHeight - 300) {
-    bgOverlayFooter.style.animation = "ghostOut 2s linear";
-    bgOverlayFooter.style.opacity = "0";
-    sign.style.animation = "none";
+    bgOverlayFooter.style.animation = 'ghostOut 2s linear';
+    bgOverlayFooter.style.opacity = '0';
+    sign.style.animation = 'none';
   } else {
-    bgOverlayFooter.style.animation = "ghostShow 2s linear";
-    bgOverlayFooter.style.opacity = "1";
-    sign.style.animation = "start-sign 4s linear forwards";
+    bgOverlayFooter.style.animation = 'ghostShow 2s linear';
+    bgOverlayFooter.style.opacity = '1';
+    sign.style.animation = 'start-sign 4s linear forwards';
   }
 };
 animationOnScroll();
 
 //* INTRO TEXT
 
-let idx = 0;
-let char = 0;
-let currentText = [];
-let deleting = false;
-let isEnd = false;
+let idx = 0,
+    char = 0,
+    currentText = [],
+    deleting = false,
+    isEnd = false;
 
 function typeText() {
   isEnd = false;
@@ -275,12 +283,10 @@ function typeText() {
 setTimeout(typeText, 3000);
 
 //* SLIDER
-const sliderWrapper = document.querySelector('.section-project__slider__wrapper');
-const slider = document.querySelector('.slider');
-console.log(slider.offsetWidth);
-const projectContainer = document.querySelectorAll('.slider__project-container');
-
-const controlDots = document.querySelectorAll('.dot');
+const sliderWrapper = document.querySelector('.section-project__slider__wrapper'),
+      slider = document.querySelector('.slider'),
+      projectContainer = document.querySelectorAll('.slider__project-container'),
+      controlDots = document.querySelectorAll('.dot');
 let sliderCount = 0;
 let sliderWidth;
 
