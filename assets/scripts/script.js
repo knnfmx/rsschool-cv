@@ -24,8 +24,48 @@ const body = document.querySelector('#body'),
       phrases = ['Anton Vasilyuk', 'Developer', 'Front-end', 'Design',
     'WEB 3.0'];
 
-//* BURGER
+//* INTRO TEXT
+let idx = 0,
+char = 0,
+currentText = [],
+deleting = false,
+isEnd = false;
 
+function typeText() {
+  isEnd = false;
+
+  if (idx < phrases.length) {
+  if (!deleting && char <= phrases[idx].length) {
+    currentText.push(phrases[idx][char]);
+    char++;
+    introText.innerHTML = currentText.join('');
+  }
+  if (deleting && char <= phrases[idx].length) {
+    currentText.pop(phrases[idx][char]);
+    char--;
+    introText.innerHTML = currentText.join('');
+  }
+  if (char == phrases[idx].length) {
+    isEnd = true;
+    deleting = true;
+  }
+  if (deleting && char === 0) {
+    currentText = [];
+    deleting = false;
+    idx++;
+    if (idx == phrases.length) {
+      idx = 0;
+    }
+  }
+  }
+  const speedUp = Math.random() * (80 - 50) + 50;
+  const normalSpeed = Math.random() * (200 - 100) + 100;
+  const time = isEnd ? 2000 : deleting ? speedUp : normalSpeed;
+  setTimeout(typeText, time);
+}
+setTimeout(typeText, 3000);
+
+//* BURGER
 function openMenu() {
   header.classList.add('header_small');
   menuBtn.classList.remove('_close');
@@ -91,12 +131,13 @@ function animationOnScroll() {
   function  displayNone() {
     header.style.display = "none";
     header.style.visibility = "hidden";
-  };
+  }
 
   function slowShow() {
     header.style.display = "flex";
     header.style.visibility = "visible";
   }
+
   if (scrollTop < aboutDistFromTop) {
     header.style.animation = "hideMenu .5s linear forwards";
     header.style.opacity = 0;
@@ -125,13 +166,12 @@ function animationOnScroll() {
       document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + (scrollTop - horizontalScrollDistFromTop) + "px)";
     }
   }
-  
-    
+      
   function offset(el) {
     const rect = el.getBoundingClientRect(),
           scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
           scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
 
   function showParagraph(idx, el) {
@@ -146,68 +186,60 @@ function animationOnScroll() {
     el.children.item(idx).style.filter = 'blur(4px)';
   }
 
+  function showElement(el) {
+    el.style.animation = 'showParagraphPhoto .7s linear';
+    el.style.transform = 'scale(1)';
+    el.style.opacity = '1';
+    el.style.filter = 'blur(0px)';
+  }
+
+  function hideElement(el) {
+    el.style.animation = 'hideParagraphPhoto .7s linear';
+    el.style.transform = 'scale(0.98)';
+    el.style.opacity = '0';
+    el.style.filter = 'blur(4px)';
+  }
 
   // TODO add animation for blocks
   if (paragraphAboutFirst.getBoundingClientRect().top >= windowHeight / 2) {
-    paragraphImageFirst.style.animation = 'hideParagraphPhoto .7s linear';
-    paragraphImageFirst.style.transform = 'scale(0.98)';
-    paragraphImageFirst.style.opacity = '0';
-    paragraphImageFirst.style.filter = 'blur(4px)';
+    hideElement(paragraphImageFirst);
     paragraphAnim[0].style.animation = 'zoomOut 2s linear';
     paragraphAnim[0].style.transform = 'scale(0.98)';
     for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
       hideParagraph(idx, paragraphAnim[0]);
-    }
-    
+    } 
   } else if (paragraphAboutFirst.getBoundingClientRect().top <= -windowHeight / 8) {
-    paragraphImageFirst.style.animation = 'hideParagraphPhoto .7s linear';
-    paragraphImageFirst.style.transform = 'scale(0.98)';
-    paragraphImageFirst.style.opacity = '0';
-    paragraphImageFirst.style.filter = 'blur(4px)';
+    hideElement(paragraphImageFirst);
     paragraphAnim[0].style.animation = 'zoomOut 2s linear';
     paragraphAnim[0].style.transform = 'scale(0.98)';
     for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
       hideParagraph(idx, paragraphAnim[0]);
     }
-    
   } else {
-    paragraphImageFirst.style.animation = 'showParagraphPhoto .7s linear';
-    paragraphImageFirst.style.transform = 'scale(1)';
-    paragraphImageFirst.style.opacity = '1';
-    paragraphImageFirst.style.filter = 'blur(0px)';
+    showElement(paragraphImageFirst);
     paragraphAnim[0].style.animation = 'zoomIn 2s linear';
     paragraphAnim[0].style.transform = 'scale(1)';
     for (let idx = 0; idx < paragraphAnim[0].children.length; idx++) {
       setTimeout(() => showParagraph(idx, paragraphAnim[0]), `${idx * 200}`);
     }
-    
   }
 
   if (paragraphAboutSecond.getBoundingClientRect().top >= windowHeight / 1.5) {
-    paragraphImageSecond.style.animation = 'hideParagraphPhoto .7s linear';
-    paragraphImageSecond.style.transform = 'scale(0.98)';
-    paragraphImageSecond.style.opacity = '0';
-    paragraphImageSecond.style.filter = 'blur(4px)';
+    hideElement(paragraphImageSecond);
     paragraphAnim[1].style.animation = 'zoomOut 2s linear';
     paragraphAnim[1].style.transform = 'scale(0.94)';
     for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
       hideParagraph(idx, paragraphAnim[1]);
     }
   } else if (paragraphAboutSecond.getBoundingClientRect().top <= -windowHeight / 10) {
-    paragraphImageSecond.style.animation = 'hideParagraphPhoto .7s linear';
-    paragraphImageSecond.style.transform = 'scale(0.98)';
-    paragraphImageSecond.style.opacity = '0';
-    paragraphImageSecond.style.filter = 'blur(4px)';
+    hideElement(paragraphImageSecond);
     paragraphAnim[1].style.animation = 'zoomOut 2s linear';
     paragraphAnim[1].style.transform = 'scale(0.94)';
     for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
       hideParagraph(idx, paragraphAnim[1]);
     }
   } else {
-    paragraphImageSecond.style.animation = 'showParagraphPhoto .7s linear';
-    paragraphImageSecond.style.transform = 'scale(1)';
-    paragraphImageSecond.style.opacity = '1';
-    paragraphImageSecond.style.filter = 'blur(0px)';
+    showElement(paragraphImageSecond);
     paragraphAnim[1].style.animation = 'zoomIn 2s linear';
     paragraphAnim[1].style.transform = 'scale(1)';
     for (let idx = 0; idx < paragraphAnim[1].children.length; idx++) {
@@ -215,72 +247,41 @@ function animationOnScroll() {
     }
   }
 
-
+  const education = document.querySelector('.education'),
+        language = document.querySelector('.language');
 
   if (sectionEducation.getBoundingClientRect().top >= windowHeight / 4) {
+    hideElement(education);
+    hideElement(language);
     bgOverlayEducation.style.animation = 'brainOut .7s linear';
     bgOverlayEducation.style.opacity = '0';
   } else if (sectionEducation.getBoundingClientRect().top <= -windowHeight / 2) {
+    hideElement(education);
+    hideElement(language);
     bgOverlayEducation.style.animation = 'brainOut .7s linear';
     bgOverlayEducation.style.opacity = '0';
   } else {
+    showElement(education);
+    showElement(language);
     bgOverlayEducation.style.animation = 'brainShow .7s linear';
     bgOverlayEducation.style.opacity = '1';
   }
+
+  const contactForm = document.querySelector('.contact-form__wrapper');
 
   if (scrollTop <= body.clientHeight - footer.clientHeight - 300) {
     bgOverlayFooter.style.animation = 'ghostOut 2s linear';
     bgOverlayFooter.style.opacity = '0';
     sign.style.animation = 'none';
+    hideElement(contactForm);
   } else {
     bgOverlayFooter.style.animation = 'ghostShow 2s linear';
     bgOverlayFooter.style.opacity = '1';
     sign.style.animation = 'start-sign 4s linear forwards';
+    setTimeout(() => showElement(contactForm), 1000);
   }
 };
 animationOnScroll();
-
-//* INTRO TEXT
-
-let idx = 0,
-    char = 0,
-    currentText = [],
-    deleting = false,
-    isEnd = false;
-
-function typeText() {
-  isEnd = false;
-
-  if (idx < phrases.length) {
-    if (!deleting && char <= phrases[idx].length) {
-      currentText.push(phrases[idx][char]);
-      char++;
-      introText.innerHTML = currentText.join('');
-    }
-    if (deleting && char <= phrases[idx].length) {
-      currentText.pop(phrases[idx][char]);
-      char--;
-      introText.innerHTML = currentText.join('');
-    }
-    if (char == phrases[idx].length) {
-      isEnd = true;
-      deleting = true;
-    }
-    if (deleting && char === 0) {
-      currentText = [];
-      deleting = false;
-      idx++;
-      if (idx == phrases.length) {
-        idx = 0;
-      }
-    }
-  }
-  const speedUp = Math.random() * (80 - 50) + 50;
-  const normalSpeed = Math.random() * (200 - 100) + 100;
-  const time = isEnd ? 2000 : deleting ? speedUp : normalSpeed;
-  setTimeout(typeText, time);
-}
-setTimeout(typeText, 3000);
 
 //* SLIDER
 const sliderWrapper = document.querySelector('.section-project__slider__wrapper'),
