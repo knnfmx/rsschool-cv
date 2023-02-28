@@ -45,6 +45,7 @@ a {
 }
 
 body {
+  position: relative;
   font-family: var(--font-body);
   font-size: 14px;
   width: 100%;
@@ -1032,6 +1033,20 @@ main {
   padding: 2px 10px;
 }
 
+.contact-form__checkbox-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+.checkbox-label__link {
+  color: var(--color-light-blue-3);
+}
+
+.checkbox-label__link:hover {
+  color: var(--color-light-blue-2);
+}
+
 .label-star {
   font-size: 10px;
 }
@@ -1076,15 +1091,17 @@ main {
 .contact-form__input:focus,
 .contact-form__textarea:focus,
 .contact-form__input:valid,
-.contact-form__textarea:valid,
-.contact-form__input:not(:placeholder-shown).contact-form__input:not(:focus),
-.contact-form__textarea:not(:placeholder-shown).contact-form__input:not(:focus) {
+.contact-form__textarea:valid
+/* .contact-form__input:not(:placeholder-shown).contact-form__input:not(:focus),
+.contact-form__textarea:not(:placeholder-shown).contact-form__input:not(:focus)  */
+{
   color: var(--text-color);
   background-color: var(--bg-color-main);
   border-color: var(--color-light-blue-2);
   outline: none;
 
 }
+
 .contact-form__input:focus ~ .contact-form__label,
 .contact-form__textarea:focus ~ .contact-form__label,
 .contact-form__input:valid ~ .contact-form__label,
@@ -1105,6 +1122,10 @@ main {
 .contact-form__input:not(:placeholder-shown).contact-form__input:not(:focus) ~ .contact-form__label > .label-star,
 .contact-form__textarea:not(:placeholder-shown).contact-form__input:not(:focus) ~ .contact-form__label > .label-star {
   font-size: 8px;
+}
+
+.contact-form__input._error {
+  border-color: red;
 }
 
 /* .contact-form__input:invalid ~ .contact-form__label,
@@ -1141,6 +1162,8 @@ main {
   height: 20px;
   margin-right: 5px;
 }
+
+
 /** FOOTER  */
 
 .footer {
@@ -1149,6 +1172,28 @@ main {
   height: 100vh;
   padding: 100px 40px 20px;
   margin: 0 auto;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0c0c0c center no-repeat url(../images/loading.gif);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+}
+
+.footer._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer-bg-overlay {
@@ -1324,6 +1369,7 @@ main {
 .footer-socials-list {
   gap: 10px;
 }
+
 /** MEDIA QUERIES */
 /* intro page content */
 
