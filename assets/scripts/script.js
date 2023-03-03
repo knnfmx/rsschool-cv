@@ -211,7 +211,7 @@ function animationOnScroll() {
   function showElement(el) {
     el.style.animation = 'showParagraphPhoto .7s linear';
     el.style.transform = 'scale(1)';
-    el.style.opacity = '1';
+    el.style.opacity = '0.8';
     el.style.filter = 'blur(0px)';
   }
 
