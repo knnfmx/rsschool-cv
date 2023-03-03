@@ -4,6 +4,7 @@ const body = document.querySelector('#body'),
       menu = document.querySelector('.menu__links-list'),
       menuItems = menu.querySelectorAll('.menu__links-list__item'),
       menuLinks = document.querySelectorAll('.menu__link'),
+      headerLogo = document.querySelector('.header__menu-logo');
       menuBGShadow = document.querySelector('.menu-bg-shadow'),
 
       sectionIntro = document.querySelector('#intro'),
@@ -14,6 +15,7 @@ const body = document.querySelector('#body'),
       sectionProjects = document.querySelector('#projects'),
       sectionEducation = document.querySelector('#education'),
       bgOverlayEducation = document.querySelector('.section-education-bg-overlay'),
+      navSectionAll = document.querySelectorAll('.nav-section'),
 
       footer = document.querySelector('#footer'),
       bgOverlayFooter = document.querySelector('.footer-bg-overlay'),
@@ -104,10 +106,12 @@ menuBtn.addEventListener('click', () => {
 });
 
 menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (el) => {
     closeMenu();
   });
 });
+
+headerLogo.addEventListener('click', closeMenu);
 
 menuBGShadow.addEventListener('click', (el) => {
   if (el.target.classList.contains('close-menu')) {
@@ -115,19 +119,38 @@ menuBGShadow.addEventListener('click', (el) => {
   }
 });
 
+
+
 const paragraphAboutFirst = document.querySelector('.first-paragraph__wrapper'),
       paragraphAboutSecond = document.querySelector('.second-paragraph__wrapper'),
       paragraphAnim = document.querySelectorAll('.section-about__paragraph'),
       paragraphImageFirst = document.querySelector('.first-paragraph__img'),
       paragraphImageSecond = document.querySelector('.second-paragraph__img');
 
-window.addEventListener('scroll', animationOnScroll);
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+}
 
 function animationOnScroll() {
   let scrollTop = window.scrollY;
   let aboutDistFromTop = sectionAbout.offsetTop - 350;
-  
+
+
   // Header navigation animation
+  navSectionAll.forEach(el => {
+    let sectionHeight = el.offsetHeight,
+        sectionTop = el.offsetTop - 350,
+        sectionId = el.getAttribute('id');
+        if (scrollTop > sectionTop && scrollTop <= sectionTop + sectionHeight) {
+          document.querySelector(`.${sectionId}-link`).classList.add('_active');
+        } else {
+          document.querySelector(`.${sectionId}-link`).classList.remove('_active');
+        }
+  });
+
   function  displayNone() {
     header.style.display = "none";
     header.style.visibility = "hidden";
@@ -152,13 +175,18 @@ function animationOnScroll() {
   let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth,
       windowHeight = window.screen.height,
       horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth,
-      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop,
+      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop - 500,
+      // -200
       scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth,
       skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
+      console.log("horisontal scroll " + horizontalScrollDistFromTop);
+      console.log("horisontal dist " + scrollDist);
+      console.log("skill height " + skillSectionHeight);
+      console.log("scroll top " + scrollTop);
  
   // section Skill horizontal scroll animation
   if (windowWidth > 834) {
-    document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight) + "px";
+    document.querySelector('.horizontal-scroll').style.height = (horizontalLength - windowHeight + skillSectionHeight - 400) + "px";
     if (scrollTop < horizontalScrollDistFromTop) {
       document.querySelector('.horizontal-scroll__section__wrapper').style.transform = "translateX(-" + "0" + "px)";
     }
@@ -167,12 +195,6 @@ function animationOnScroll() {
     }
   }
       
-  function offset(el) {
-    const rect = el.getBoundingClientRect(),
-          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-  }
 
   function showParagraph(idx, el) {
     el.children.item(idx).style.animation = 'showParagraph .7s linear';
@@ -200,7 +222,6 @@ function animationOnScroll() {
     el.style.filter = 'blur(4px)';
   }
 
-  // TODO add animation for blocks
   if (paragraphAboutFirst.getBoundingClientRect().top >= windowHeight / 2) {
     hideElement(paragraphImageFirst);
     paragraphAnim[0].style.animation = 'zoomOut 2s linear';
@@ -283,7 +304,11 @@ function animationOnScroll() {
 };
 animationOnScroll();
 
+window.addEventListener('scroll', animationOnScroll);
+
+
 //* SLIDER
+
 const sliderWrapper = document.querySelector('.section-project__slider__wrapper'),
       slider = document.querySelector('.slider'),
       projectContainer = document.querySelectorAll('.slider__project-container'),

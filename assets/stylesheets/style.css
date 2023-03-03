@@ -326,7 +326,7 @@ body {
 }
 
 .header__menu-logo:hover {
-  background: -webkit-linear-gradient(180deg, var(--color-light-blue), var(--color-light-blue-2), var(--color-light-blue-3), var(--color-light-blue-4));;
+  background: -webkit-linear-gradient(360deg, var(--color-light-blue), var(--color-light-blue-2), var(--color-light-blue-3), var(--color-light-blue-4));;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -340,7 +340,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 
 .menu__link {
   display: block;
@@ -374,18 +373,10 @@ body {
 }
 
 .menu__links-list__item:hover > .menu__link {
-  color: #fff;
+  color: var(--color-light-blue);
   text-shadow: 0 -2px 10px var(--text-shadow);
-  animation: menu-links-glow .8s ease;
-  -webkit-animation: menu-links-glow .8s ease;
-  -moz-animation: menu-links-glow .8s ease;
-  -o-animation: menu-links-glow .8s ease;
-  animation-iteration-count: 1;
 }
 
-.menu__links-list__item:hover > .menu__link::after {
-  transform: translateX(0);
-}
 
 @keyframes menu-links-glow {
   0%, 18%, 20%, 40%, 60%, 90% {
@@ -398,7 +389,18 @@ body {
   }
 }
 
-.menu__link:active {
+@keyframes menu-links-glow-hover {
+  0%, 18%, 20%, 40%, 60%, 90% {
+    color: var(--text-menu-color);
+    text-shadow: none;
+  }
+  18.1%, 20.1%, 41%, 64%, 100% {
+    color: var(--color-light-blue);
+    text-shadow: 0 -4px 10px var(--text-shadow);
+  }
+}
+
+.menu__link._active {
   color: #fff;
   text-shadow: 0 -2px 10px var(--text-shadow);
   animation: menu-links-glow .8s ease;
@@ -408,9 +410,11 @@ body {
   animation-iteration-count: 1;
 }
 
-.menu__link:active.menu__link::after {
+.menu__link._active.menu__link::after {
   transform: translateX(0);
 }
+
+
 
 /** MAIN CONTENT SECTIONS */
 
@@ -445,6 +449,7 @@ main {
   color: transparent;
   -webkit-text-stroke: 1px var(--section-title-color);
   text-shadow: none;
+  user-select: none;
   transition: all .3s ease-in;
   -webkit-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
@@ -1125,7 +1130,7 @@ main {
 }
 
 .contact-form__input._error {
-  border-color: red;
+  border-color: #ff000070;
 }
 
 /* .contact-form__input:invalid ~ .contact-form__label,
@@ -1563,7 +1568,7 @@ main {
     -o-transition: all .7s;
     background-color: #000000;
   }
-  ._active {
+  .menu__links-list._active {
     right: 0;
     transform: translateY(100%);
     z-index: 25;
@@ -1849,9 +1854,7 @@ main {
     -o-animation: menu-text-close 1s forwards ease-in;
   }
 
-
-  .menu__links-list__item::before,
-  .menu__links-list__item::after {
+  .menu__link::after {
     display: none;
   }
 
@@ -2085,7 +2088,9 @@ main {
     font-size: 10px;
   }
 
-
+  .sign-text {
+    height: 70px
+  }
 }
 @media screen and (max-width: 414px) {
 }

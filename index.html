@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
   <title>Web RSS CV</title>
   <link rel="shortcut icon" type="img/png" href="assets/svg/socials/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,19 +20,19 @@
     <nav class="header__menu">
       <ul class="menu__links-list">
         <li class="menu__links-list__item">
-          <a href="#about" class="menu__link">about me</a>
+          <a href="#about" class="menu__link about-link">about me</a>
         </li>
         <li class="menu__links-list__item">
-          <a href="#code" class="menu__link">code</a>
+          <a href="#code" class="menu__link code-link">code</a>
         </li>
         <li class="menu__links-list__item">
-          <a href="#projects" class="menu__link">projects</a>
+          <a href="#projects" class="menu__link projects-link">projects</a>
         </li>
         <li class="menu__links-list__item">
-          <a href="#education" class="menu__link">education</a>
+          <a href="#education" class="menu__link education-link">education</a>
         </li>
         <li class="menu__links-list__item">
-          <a href="#footer" class="menu__link">contacts</a>
+          <a href="#footer" class="menu__link footer-link">contacts</a>
         </li>
       </ul>
     </nav>
@@ -131,7 +130,7 @@
     </div>
   </div>
   <main>
-    <section class="section-container" id="about">
+    <section class="section-container nav-section" id="about">
       <div class="section-title__wrapper">
         <h2 class="section-title">about me</h2>
         <p class="section-number">1</p>
@@ -291,7 +290,7 @@
         </div>
       </div>
     </div>
-    <section class="section-container" id="code">
+    <section class="section-container nav-section" id="code">
       <div class="section-title__wrapper">
         <h2 class="section-title">code</h2>
         <div class="section-number">2</div>
@@ -326,7 +325,7 @@ function drawLines() {
         </div>
       </div>
     </section>
-    <section class="section-container" id="projects">
+    <section class="section-container nav-section" id="projects">
       <div class="section-title__wrapper">
         <h2 class="section-title">projects</h2>
         <p class="section-number">3</p>
@@ -393,7 +392,7 @@ function drawLines() {
         </div>
       </div>
     </section>
-    <section class="section-container" id="education">
+    <section class="section-container nav-section" id="education">
       <div class="section-title__wrapper">
         <h2 class="section-title">education</h2>
         <p class="section-number">4</p>
@@ -438,7 +437,7 @@ function drawLines() {
       </div>
     </section>
   </main>
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer nav-section footer-link">
     <div class="footer-bg-overlay"></div>
     <div class="footer-content-container">
       <div class="contact-form__wrapper">
