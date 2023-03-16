@@ -136,9 +136,7 @@ function offset(el) {
 
 function animationOnScroll() {
   let scrollTop = window.scrollY;
-  let aboutDistFromTop = sectionAbout.offsetTop - 350;
-
-
+  
   // Header navigation animation
   navSectionAll.forEach(el => {
     let sectionHeight = el.offsetHeight,
@@ -149,17 +147,19 @@ function animationOnScroll() {
         } else {
           document.querySelector(`.${sectionId}-link`).classList.remove('_active');
         }
-  });
-
+      });
+      
   function  displayNone() {
     header.style.display = "none";
     header.style.visibility = "hidden";
   }
-
+  
   function slowShow() {
     header.style.display = "flex";
     header.style.visibility = "visible";
   }
+  
+  let aboutDistFromTop = sectionAbout.offsetTop - 350;
 
   if (scrollTop < aboutDistFromTop) {
     header.style.animation = "hideMenu .5s linear forwards";
@@ -175,7 +175,7 @@ function animationOnScroll() {
   let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth,
       windowHeight = window.screen.height,
       horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth,
-      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop - 500,
+      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop - 400,
       // -200
       scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth,
       skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
@@ -302,7 +302,6 @@ function animationOnScroll() {
     setTimeout(() => showElement(contactForm), 1000);
   }
 };
-animationOnScroll();
 
 window.addEventListener('scroll', animationOnScroll);
 
