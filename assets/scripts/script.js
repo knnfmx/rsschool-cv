@@ -175,7 +175,7 @@ function animationOnScroll() {
   let windowWidth = document.querySelector('.horizontal-scroll__section').offsetWidth,
       windowHeight = window.screen.height,
       horizontalLength = document.querySelector('.horizontal-scroll__section__wrapper').scrollWidth,
-      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop - 500,
+      horizontalScrollDistFromTop = document.querySelector('.horizontal-scroll').offsetTop - 400,
       // -200
       scrollDist = horizontalScrollDistFromTop + horizontalLength - windowWidth,
       skillSectionHeight = document.querySelector('.horizontal-scroll__section__wrapper').clientHeight;
