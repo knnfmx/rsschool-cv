@@ -108,6 +108,8 @@ body {
   display: block;
   width: 40px;
   height: 40px;
+  font-size: 0 !important; 
+  color: transparent !important;
 }
 
 .github-logo {
@@ -116,6 +118,19 @@ body {
   -webkit-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
+}
+
+.socials-list {
+  display: flex;
+  align-items: center;
+}
+
+.socials-list__item-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 0 !important; 
+  color: transparent !important;
 }
 
 .socials-list__item-link__icon {
@@ -131,17 +146,6 @@ body {
   -webkit-transition: all .4s ease-in;
   -moz-transition: all .4s ease-in;
   -o-transition: all .4s ease-in;
-}
-
-.socials-list {
-  display: flex;
-  align-items: center;
-}
-
-.socials-list__item-link {
-  display: block;
-  width: 40px;
-  height: 40px;
 }
 
 /** INTRO PAGE CONTENT */
@@ -1309,6 +1313,11 @@ main {
   gap: 10px;
 }
 
+.footer__social-list__link {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
 /** MEDIA QUERIES */
 
 @media screen and (max-width: 1280px) {
@@ -2324,7 +2333,7 @@ main {
   .contacts-list-item__link:hover .icon-stop:first-child {
     stop-color: var(--color-light-blue-2);
   }
-  
+
   .contacts-list-item__link:hover .icon-stop:last-child {
     stop-color: var(--color-light-blue-3);
   }
