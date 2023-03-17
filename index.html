@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/stylesheets/reset.css">
   <link rel="stylesheet" href="assets/stylesheets/style.css">
+  <link rel="stylesheet" href="/path/to/styles/default.min.css">
 </head>
 <body id="body" class="body">
   <header class="header">
@@ -305,7 +306,7 @@
           <div class="code__wrapper">
             <canvas class="canvas-demo"></canvas>
             <pre class="code-example__wrapper">
-              <code class="code-example">
+              <code class="code-example language-javascript style-base16/dracula">
 function drawLines() {
   for (let i = 0; i &lt; number - 1; i++) {
     for (let j = i + 1; j &lt; number; j++) {
@@ -647,5 +648,7 @@ function drawLines() {
   </footer>
   <script src="assets/scripts/demo-particles.js"></script>
   <script src="assets/scripts/script.js"></script>
+  <script src="/path/to/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 </html>
