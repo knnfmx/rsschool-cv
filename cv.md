@@ -7,8 +7,8 @@
 +375(29)6047704
 
 ***Social network links:***
-[LinkedIn]()
-[Facebook]()
+[LinkedIn](https://www.linkedin.com/in/anton-vasilyuk-283916177/) / 
+[Facebook](https://www.facebook.com/Kennyfmx)
 
 
 ***Usernames in Messengers:***
