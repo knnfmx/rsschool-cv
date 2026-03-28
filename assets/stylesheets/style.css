@@ -392,3 +392,223 @@ body {
 .menu__link._active.menu__link::after {
   transform: translateX(0);
 }
+
+/** MAIN CONTENT SECTIONS */
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section-container {
+  display: flex;
+  height: 100vh;
+  padding-top: 108px;
+}
+
+.section-title__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.section-title {
+  font-size: 64px;
+  letter-spacing: 3px;
+  padding: 50px 20px;
+  background-color: var(--bg-color-main);
+  text-transform: uppercase;
+  transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--section-title-color);
+  text-shadow: none;
+  user-select: none;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+
+.section-number {
+  font-size: 104px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--section-title-color);
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+
+.section-content__wrapper {
+  width: 100%;
+  color: var(--text-color);
+}
+
+.section-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  padding: 40px 30px 50px 50px;
+  overflow-x: hidden;
+}
+
+.section-content__title {
+  font-size: 24px;
+}
+
+/** SECTION ABOUT */
+
+.section-about {
+  justify-content: space-between;
+}
+
+.section-about__img__wrapper {
+  flex-shrink: 0;
+  position: relative;
+  height: 350px;
+  width: 198px;
+  flex-basis: auto;
+  margin: 8px;
+}
+
+.first-paragraph__img,
+.second-paragraph__img {
+  transform: scale(0.98);
+  opacity: 0;
+  filter: blur(4px);
+  transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
+  animation: hideParagraphPhoto 2s linear forwards;
+  -webkit-animation: hideParagraphPhoto 2s linear forwards;
+  -moz-animation: hideParagraphPhoto 2s linear forwards;
+  -o-animation: hideParagraphPhoto 2s linear forwards;
+}
+
+.section-about__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.section-about__img-filter {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left bottom, #000, #00000000, #000);
+}
+
+@keyframes showParagraphPhoto {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
+
+@keyframes hideParagraphPhoto {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.98);
+  }
+}
+
+.first-paragraph__wrapper,
+.second-paragraph__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.section-about__paragraph {
+  flex-basis: 70%;
+  text-indent: 20px;
+  font-size: 1.7em;
+  text-align: justify;
+  transform: scale(0.98);
+  transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
+  animation: zoomOut 2s linear forwards;
+  -webkit-animation: zoomOut 2s linear forwards;
+  -moz-animation: zoomOut 2s linear forwards;
+  -o-animation: zoomOut 2s linear forwards;
+}
+
+.section-about__paragraph > span {
+  opacity: 0;
+  filter: blur(4px);
+  transition: all .9s ease-in;
+  -webkit-transition: all .9s ease-in;
+  -moz-transition: all .9s ease-in;
+  -o-transition: all .9s ease-in;
+  animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -moz-animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -o-animation: hideParagraph .9s .1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes showParagraph {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes hideParagraph {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+.second-paragraph__img {
+  order: 1;
+}
