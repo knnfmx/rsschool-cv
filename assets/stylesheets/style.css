@@ -861,3 +861,100 @@ main {
 ._hidden-desktop {
   display: none;
 }
+
+/** EDUCATION */ 
+
+.section-education {
+  position: relative;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.section-education-bg-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #000000, #0000001c, #000000),
+              85% 55% no-repeat url(../images/09229-cover-opener2.jpg);
+  background-size: auto;
+  animation: brainOut .7s linear;
+  -webkit-animation: brainOut .7s linear;
+  -moz-animation: brainOut .7s linear;
+  -o-animation: brainOut .7s linear;
+  z-index: 0;
+}
+
+@keyframes brainShow {
+  from {
+    opacity: 0;
+    transform: translate(150px, -150px) scale(0.8) rotate(15deg);
+  } to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0);
+  }
+}
+
+@keyframes brainOut {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0);
+  } to {
+    opacity: 0;
+    transform: translate(150px, -150px) scale(0.8) rotate(15deg);
+  }
+}
+
+.education-title {
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--text-shadow);
+  padding-bottom: 20px;
+}
+
+.education,
+.language {
+  position: relative;
+  width: 450px;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 24px;
+  border: 1px solid transparent !important;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  opacity: 0.9;
+}
+
+.color-shadow {
+  background-image: linear-gradient(var(--bg-color-main), var(--bg-color-main)),linear-gradient(45deg, var(--color-light-blue-2), var(--color-light-blue-3));
+  background-clip: content-box,border-box;
+  background-origin: border-box;
+  box-shadow: 0 0 6px var(--color-light-blue-2), 2px 1000px 1px var(--bg-color-main) inset !important;
+}
+
+.education-place {
+  padding-bottom: 5px;
+  color: var(--color-light-blue-3);
+}
+
+.education-place-bold-text,
+.language-bold-text {
+  color: var(--text-color);
+  font-weight: 900;
+}
+
+.language-list {
+  color: var(--color-light-blue-3);
+}
+
+.language-abilities__list-item {
+  padding-top: 10px;
+  padding-left: 70px;
+  color: var(--color-light-blue-3);
+}
