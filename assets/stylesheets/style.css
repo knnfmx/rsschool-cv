@@ -612,3 +612,93 @@ main {
 .second-paragraph__img {
   order: 1;
 }
+
+/** SKILLS */
+
+.horizontal-scroll__sticky-wrapper {
+  overflow: hidden;
+  position: sticky;
+  max-width: 1440px;
+  top: 200px;
+  margin: 0 auto;
+}
+
+.horizontal-scroll__section__wrapper {
+  position: relative;
+  display: flex;
+}
+
+.horizontal-scroll__section {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.main-skill {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.skill-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+  margin-top: 50px;
+  padding-left: 30px;
+}
+
+.skill-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 250px;
+  height: 150px;
+}
+
+.react,
+.typescript,
+.javascript {
+  background-color: #00bbb8;
+}
+ 
+.css,
+.html {
+  background-color: #eeff00;
+}
+
+.sass,
+.webpack, 
+.gitbash {
+  background-color: #fff;
+}
+
+.illustrator,
+.photoshop,
+.figma {
+  background-color: #f05133;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.javascript-icon {
+  background-color: #000000;
+  fill: #00bbb8;
+}
+
+.skill-name {
+  font-family: var(--font-body);
+  font-weight: var(--font-bold);
+  font-size: 30px;
+}
