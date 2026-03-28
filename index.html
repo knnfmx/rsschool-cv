@@ -290,6 +290,41 @@
         </div>
       </div>
     </div>
+    <section class="section-container nav-section" id="code">
+      <div class="section-title__wrapper">
+        <h2 class="section-title">code</h2>
+        <div class="section-number">2</div>
+      </div>
+      <div class="section-content__wrapper">
+        <div class="section-content section-code">
+          <h3 class="section-content__title code-title">Particles Demo Code</h3>
+          <div class="code__wrapper">
+            <canvas class="canvas-demo"></canvas>
+            <pre class="code-example__wrapper">
+              <code class="code-example language-javascript">
+function drawLines() {
+  for (let i = 0; i &lt; number - 1; i++) {
+    for (let j = i + 1; j &lt; number; j++) {
+      const pointA = points[i];
+      const pointB = points[j];
+      const dist = getDist(pointA, pointB);
+      if (dist &lt;= DIST) {
+        context.beginPath();
+        context.strokeStyle = '#00bbb8';
+        context.lineWidth = (1 - dist / DIST)**1.5;
+        context.moveTo(pointA.x, pointA.y);
+        context.lineTo(pointB.x, pointB.y);
+        context.stroke();
+      }
+    }
+  }
+}
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
