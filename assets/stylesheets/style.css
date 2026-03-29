@@ -2304,12 +2304,12 @@ main {
     color: #fff;
   }
 
-  .section-title__wrapper:hover > .section-title,
+  /* .section-title__wrapper:hover > .section-title,
   .section-title__wrapper:hover > .section-number {
     color: var(--text-color);
     -webkit-text-stroke: 1px var(--text-color);
     text-shadow: 0 0 10px var(--text-shadow);
-  }
+  } */
 
   .dot:hover {
     background-color: var(--color-light-blue-4);
