@@ -2,11 +2,13 @@
 
 ## Contacts
 
-\*\* Minsk, Belarus
+**Minsk, Belarus**
 
 **_Phone:_** +375(29)6047704
 
-**_Social network links_** [LinkedIn]() / [Facebook]()
+**_Social network links_**
+[LinkedIn](https://www.linkedin.com/in/anton-vasilyuk-283916177/) /
+[Facebook](https://www.facebook.com/Kennyfmx)
 
 **_Messengers_** [Discord](https://discordapp.com/users/642108724076478516)
 
@@ -33,11 +35,11 @@ contribute to the development of a high-quality product.
 
 ### Career Goals
 
-I am seeking to continue my career as a Full-Stack Developer with a strong focus
-on frontend development, joining a creative and growth-oriented company where I
-can contribute to real-world products and work as part of a strong engineering
-team. I am interested in modern web development, continuously following the
-evolution of technologies, development practices, and industry trends.
+I am seeking to continue my career as a Full-Stack Developer, joining a creative
+and growth-oriented company where I can contribute to real-world products and
+work as part of a strong engineering team. I am interested in modern web
+development, continuously following the evolution of technologies, development
+practices, and industry trends.
 
 I aim to contribute not only through writing clean and maintainable code, but
 also through a strong understanding of the product, user experience, and the
@@ -53,9 +55,15 @@ greater responsibility for the quality and success of the products I work on.
 
 ### Skills
 
+**Main stack**
+
 HTML5 / CSS (SCSS, SASS, LESS) / Tailwind / JavaScript (jQuery, Bootstrap)/
 TypeScript / React / Node.js (npm) / Webpack / Git / AWS / Codex / Claude Code /
 CMS (Wordpress, Joomla, MODX) / OS (Windows, macOS, Linux)
+
+**Extra design skills**
+
+Figma / Photoshop / Illustrator / Autodesk 3ds MAX / AutoCAD / Blender 3d
 
 ### Code examples
 
@@ -101,7 +109,7 @@ _Belarusian State University - Lyceum - Chemical/Biology_
 
 ### Language Skills
 
-**English:** _intermediate_
+**English:** - intermediate
 
 - Abilities:
   - Listening: advanced
@@ -111,5 +119,3 @@ _Belarusian State University - Lyceum - Chemical/Biology_
   - Speech: intermediate
 
   - Write: intermediate
-
-### Work experience
